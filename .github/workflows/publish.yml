@@ -13,7 +13,6 @@ on:
           - patch
 jobs:
   publish-new-version:
-    if: ${{ github.event.inputs.release == 'major'}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
