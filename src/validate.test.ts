@@ -144,3 +144,21 @@ test('shoud throw errors for an object', async () => {
     },
   });
 });
+test('shoud return array error', async () => {
+  const params = {
+    name: 'joe',
+    list: { notAnArray: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'] },
+  };
+
+  await expect(async () =>
+    validate(
+      params,
+      object({
+        name: string(),
+        list: array(string()),
+      })
+    )
+  ).rejects.toEqual({
+    list: 'array',
+  });
+});
