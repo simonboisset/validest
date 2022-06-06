@@ -8,20 +8,24 @@ export const parseNumber = (value: unknown) => {
   return n;
 };
 
-export const number: Schema<number> = (value) => {
-  const n = parseNumber(value);
+export const number =
+  (error?: string): Schema<number> =>
+  (value) => {
+    const n = parseNumber(value);
 
-  if (n === undefined) {
-    return { errors: 'This field must be a number' };
-  }
-  return { data: n };
-};
+    if (n === undefined) {
+      return { errors: error || 'number' };
+    }
+    return { data: n };
+  };
 
-export const int: Schema<number> = (value) => {
-  const n = parseNumber(value);
+export const int =
+  (error?: string): Schema<number> =>
+  (value) => {
+    const n = parseNumber(value);
 
-  if (n === undefined || n < 0 || n !== parseInt(n.toString())) {
-    return { errors: 'This field must be an integer' };
-  }
-  return { data: n };
-};
+    if (n === undefined || n < 0 || n !== parseInt(n.toString())) {
+      return { errors: error || 'integer' };
+    }
+    return { data: n };
+  };
