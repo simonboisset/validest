@@ -4,7 +4,7 @@
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/schema-ts.esm.js",
+  "module": "dist/typed-schema-validation.esm.js",
   "files": [
     "dist"
   ],
@@ -14,11 +14,11 @@
     "test": "jest",
     "test-ci": "jest --config=./jest-ci.config.js"
   },
-  "repository": "https://github.com/simonboisset/schema-ts.git",
+  "repository": "https://github.com/simonboisset/typed-schema-validation.git",
   "bugs": {
-    "url": "https://github.com/simonboisset/schema-ts/issues"
+    "url": "https://github.com/simonboisset/typed-schema-validation/issues"
   },
-  "homepage": "https://github.com/simonboisset/schema-ts",
+  "homepage": "https://github.com/simonboisset/typed-schema-validation",
   "author": "Simon Boisset <simonboisset.dev@gmail.com>",
   "license": "MIT",
   "prettier": {
