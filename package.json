@@ -1,5 +1,5 @@
 {
-  "name": "schema-ts",
+  "name": "typed-schema-validation",
   "version": "0.0.1",
   "description": "Typed schema validation",
   "main": "dist/index.js",
