@@ -1,0 +1,37 @@
+name: CD Main
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: 'major | minor | patch'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+jobs:
+  publish-new-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 100
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+          registry-url: https://registry.npmjs.org/
+      - name: Publish New Version
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: |
+          git config --local user.email "simonboisset.dev@gmail.com"
+          git config --local user.name "simonboisset"
+          yarn
+          yarn version --new-version ${{github.event.inputs.release}} --message "schema-ts v%s"
+          yarn build
+          yarn publish
+          git push
