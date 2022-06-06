@@ -5,7 +5,7 @@ export const array =
   //@ts-ignore
   (value) => {
     if (!Array.isArray(value)) {
-      return { errors: 'This field must be an array' };
+      return { errors: 'array' };
     }
     const data: T[] = [];
     let errors: Errors<T[]> | undefined = [];
