@@ -1,16 +1,15 @@
 {
-  "name": "typed-schema-validation",
-  "version": "0.1.2",
+  "name": "@ts-v/core",
+  "version": "0.0.1",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/typed-schema-validation.esm.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "up": "yarn upgrade-interactive --latest",
-    "build": "rm -rf dist && node esbuild.js && tsc",
+    "build": "rm -rf dist && node esbuild.js && tsc --project tsconfig.build.json",
     "test": "jest",
     "test-ci": "jest --config=./jest-ci.config.js"
   },

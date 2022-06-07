@@ -19,5 +19,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Run tests
         run: |
+          cd core
           yarn
           yarn test-ci

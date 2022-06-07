@@ -15,11 +15,11 @@ test('string returns false for non-date', () => {
 
 test('date returns true for date', () => {
   const dateValue = new Date('2022-01-12');
-  expect(date()(dateValue).data.valueOf()).toBe(dateValue.valueOf());
-  expect(date()(dateValue.toJSON()).data.valueOf()).toBe(dateValue.valueOf());
-  expect(date()(dateValue.toISOString()).data.valueOf()).toBe(dateValue.valueOf());
-  expect(date()(dateValue.valueOf()).data.valueOf()).toBe(dateValue.valueOf());
-  expect(date()('2022-01-12').data.valueOf()).toBe(dateValue.valueOf());
+  expect(date()(dateValue).data?.valueOf()).toBe(dateValue.valueOf());
+  expect(date()(dateValue.toJSON()).data?.valueOf()).toBe(dateValue.valueOf());
+  expect(date()(dateValue.toISOString()).data?.valueOf()).toBe(dateValue.valueOf());
+  expect(date()(dateValue.valueOf()).data?.valueOf()).toBe(dateValue.valueOf());
+  expect(date()('2022-01-12').data?.valueOf()).toBe(dateValue.valueOf());
   expect(maybe(date())(undefined).errors).toBeUndefined();
   expect(maybe(date())(undefined).data).toBeUndefined();
 });
