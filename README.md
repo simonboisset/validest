@@ -146,3 +146,31 @@ Parameter takes another schema to defined the type. Value will be type of the ne
 const age = validate(undefined, maybe(int()));
 age = undefined;
 ```
+
+### Custom schema
+
+You can also right your own schema. The only rule is tu return a Schema type with you desired type in generic type.
+
+```ts
+import type { Schema } from 'typed-schema-validation';
+```
+
+Schema type is a function that take an unkown value and return an object `{ data , error }`. If value is good error must undefined, if it's not data must be undefined.
+
+Exemple for a password :
+
+```ts
+export const password =
+  (error?: string): Schema<string> =>
+  (value) => {
+    return typeof value === 'string' && value.length > 8 ? { data: value } : { errors: error || 'password' };
+  };
+```
+
+### Custom error
+
+Each schema can take custom error message in parameter.
+
+```ts
+const height = validate('150.5', number('This is a custom message for this value'));
+```
