@@ -30,6 +30,7 @@ jobs:
         run: |
           git config --local user.email "simonboisset.dev@gmail.com"
           git config --local user.name "simonboisset"
+          cd core
           yarn
           yarn version --new-version ${{github.event.inputs.release}} --message "v%s"
           yarn build
