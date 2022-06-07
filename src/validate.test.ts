@@ -1,5 +1,6 @@
 import { array } from './array';
-import { number } from './number';
+import { date } from './date';
+import { int, number } from './number';
 import { object } from './object';
 import { oneOf, string } from './string';
 import { validate } from './validate';
@@ -15,6 +16,23 @@ test('shoud validate form data', () => {
   expect(result.name).toBe('joe');
   expect(result.age).toBe(25);
   expect(result.password).toBe('foo');
+});
+test('shoud validate string', () => {
+  const result = validate('hello', string());
+  expect(result).toBe('hello');
+});
+test('shoud validate number', () => {
+  const result = validate('2', number());
+  expect(result).toBe(2);
+});
+test('shoud validate integer', () => {
+  const result = validate('2', int());
+  expect(result).toBe(2);
+});
+test('shoud validate date', () => {
+  const dateValue = new Date('2022-01-12');
+  const result = validate('2022-01-12', date());
+  expect(result.valueOf()).toBe(dateValue.valueOf());
 });
 test('shoud get form data with deep nested object', () => {
   const params = {

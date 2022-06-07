@@ -80,7 +80,7 @@ try {
 
 ## Type schema
 
-Here is the core typed schemas. Each schema is un function wich return a bolean if parameter is available.
+Here is the core typed schemas. Each schema is un function wich return a object with data or error.
 
 ### string
 
