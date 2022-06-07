@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: '14'
           registry-url: https://registry.npmjs.org/
+          scope: '@ts-v'
       - name: Publish New Version
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
