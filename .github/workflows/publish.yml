@@ -35,5 +35,5 @@ jobs:
           yarn
           yarn version --new-version ${{github.event.inputs.release}} --message "v%s"
           yarn build
-          yarn publish
+          yarn publish --access public
           git push
