@@ -174,3 +174,11 @@ Each schema can take custom error message in parameter.
 ```ts
 const height = validate('150.5', number('This is a custom message for this value'));
 ```
+
+### Test if is valid
+
+You can use `isValid` method against `validate`.
+
+```ts
+if(isValid('150.5', number()))
+```
