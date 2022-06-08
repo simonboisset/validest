@@ -37,5 +37,8 @@
     "esbuild-node-externals": "^1.4.1",
     "jest": "^28.1.0",
     "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "@ts-v/core": "^0.0.2"
   }
 }

@@ -661,6 +661,11 @@
   dependencies:
     "@jest/create-cache-key-function" "^27.4.2"
 
+"@ts-v/core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ts-v/core/-/core-0.0.2.tgz#c90f43fcef35faea1b8ab636287d621bafa033c2"
+  integrity sha512-aCMPfc6EjgGrQyZLnhlxOJky9lekB3K9G0RSNBY+sAZZOVNo2RZPNRxsnLh5BmXuWJLvmS9QjPATibBG2Er7Cw==
+
 "@types/babel__core@^7.1.14":
   version "7.1.19"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.19.tgz#7b497495b7d1b4812bdb9d02804d0576f43ee460"
