@@ -1,6 +1,6 @@
 {
   "name": "@ts-v/react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -46,7 +46,7 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@ts-v/core": "^0.0.4"
+    "@ts-v/core": "^0.0.5"
   },
   "keywords": [
     "typescript",
