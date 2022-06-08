@@ -11,9 +11,10 @@ import s, {
   string,
   parseNumber,
   validate,
+  isValid,
 } from '@ts-v/core';
 export { useTsvForm } from './useTsvForm';
 
 export type { Errors, Schema };
-export { array, date, int, maybe, number, object, oneOf, parseNumber, string, validate };
+export { array, date, int, maybe, number, object, oneOf, parseNumber, string, validate, isValid };
 export default s;
