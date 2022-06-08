@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-  test:
+  test-core:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -21,4 +21,26 @@ jobs:
         run: |
           cd core
           yarn
+          yarn test-ci
+  test-react:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 100
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+          registry-url: https://registry.npmjs.org/
+      - name: Run tests
+        run: |
+          cd core
+          yarn
+          yarn build
+          yarn link
+          cd ../react
+          yarn
+          yarn link @ts-v/core
           yarn test-ci
