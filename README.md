@@ -1,4 +1,4 @@
-# typed-schema-validation
+# Typescript validation
 
 Validation schema for typescript.
 
@@ -69,7 +69,7 @@ try {
         role: string(),
         age: number(),
       }),
-    })
+    }),
   );
 } catch (error) {
   error = {
@@ -134,7 +134,7 @@ const { name, age } = validate(
   object({
     name: string(),
     age: number(),
-  })
+  }),
 );
 ```
 
