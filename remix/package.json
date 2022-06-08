@@ -49,5 +49,16 @@
   },
   "dependencies": {
     "@ts-v/core": "^0.0.4"
-  }
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "remix",
+    "form",
+    "validation",
+    "schema",
+    "form-validation",
+    "remix-form",
+    "remix-form-validation"
+  ]
 }
