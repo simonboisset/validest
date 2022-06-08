@@ -2,14 +2,18 @@
   "name": "@ts-v/remix",
   "version": "0.1.2",
   "description": "Typed schema validation for remix stack",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "files": [
-    "dist"
+    "index.js",
+    "index.d.ts",
+    "react",
+    "node",
+    "data"
   ],
   "scripts": {
     "up": "yarn upgrade-interactive --latest",
-    "build": "rm -rf dist && node esbuild.js && tsc --project tsconfig.build.json",
+    "build": "rm -rf data react node index.js index.d.ts && node esbuild.js && tsc --project tsconfig.build.json",
     "test": "jest",
     "test-ci": "jest --config=./jest-ci.config.js"
   },

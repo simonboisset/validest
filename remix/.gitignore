@@ -1,5 +1,9 @@
 node_modules
 .DS_Store
-/dist
+/data
+/node
+/react
+/index.d.ts
+/index.js
 .env
 coverage
