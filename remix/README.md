@@ -20,9 +20,11 @@ yarn add @ts-v/remix
 ### useTsvAction
 
 ```tsx
-import { array, number, object, maybe oneOf, string, validate ,useTsvAction } from '@ts-v/remix';
+import { array, number, object, maybe oneOf, string, validate } from '@ts-v/remix';
 // default import also works
-import s , { useTsvAction }from '@ts-v/remix';
+import s from '@ts-v/remix';
+
+import { useTsvAction }from '@ts-v/remix/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -54,9 +56,7 @@ const Component =()=>{
 ### useTsvFetcher
 
 ```tsx
-import { array, number, object, maybe oneOf, string, validate ,useTsvFetcher } from '@ts-v/remix';
-// default import also works
-import s , { useTsvFetcher }from '@ts-v/remix';
+import { useTsvFetcher }from '@ts-v/remix/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -90,6 +90,8 @@ return (
 In ActionFunction you can validate the data of the request with same schema and it will be typed.
 
 ```ts
+import { validateRequest } from '@ts-v/remix/node';
+
 export const action: ActionFunction = ({ request }) => {
   const data = validateRequest(request, schema);
   // your data is validated and typed

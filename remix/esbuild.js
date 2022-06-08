@@ -2,8 +2,8 @@ const esbuild = require('esbuild');
 const { nodeExternalsPlugin } = require('esbuild-node-externals');
 esbuild
   .build({
-    entryPoints: ['./src/index.ts'],
-    outfile: 'dist/index.js',
+    entryPoints: ['./src/index.ts', './src/react/index.ts', './src/node/index.ts'],
+    outdir: 'dist',
     bundle: true,
     minify: true,
     treeShaking: true,
