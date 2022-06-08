@@ -4,6 +4,6 @@ Validation schema for typescript.
 
 Docs :
 
-- [core](./core/)
-- [react](./react/)
-- [remix](./remix/)
+- [core](./core#readme)
+- [react](./react#readme)
+- [remix](./remix#readme)

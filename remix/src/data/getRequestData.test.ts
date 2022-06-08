@@ -1,4 +1,4 @@
-import get from './get';
+import { getRequestData } from './getRequestData';
 
 test('shoud get form data', async () => {
   const map = new Map([
@@ -6,7 +6,7 @@ test('shoud get form data', async () => {
     ['password', 'foo'],
   ]);
   const request = { formData: () => map } as unknown as Request;
-  const result = await get(request);
+  const result = await getRequestData(request);
 
   expect(result.name).toBe('simon');
   expect(result.password).toBe('foo');
@@ -19,7 +19,7 @@ test('shoud get form data with nested object', async () => {
     ['profile-role', 'SERVER'],
   ]);
   const request = { formData: () => map } as unknown as Request;
-  const result = await get<{ name: string; profile: { username: string; lastname: string; role: string } }>(request);
+  const result = await getRequestData(request);
 
   expect(result.name).toBe('joe');
   expect(result.profile?.username).toBe('john');
@@ -34,9 +34,7 @@ test('shoud get form data with deep nested object', async () => {
     ['profile-role', 'SERVER'],
   ]);
   const request = { formData: () => map } as unknown as Request;
-  const result = await get<{ name: string; profile: { name: { firstname: string; lastname: string }; role: string } }>(
-    request,
-  );
+  const result = await getRequestData(request);
 
   expect(result.name).toBe('joe');
   expect(result.profile?.name?.firstname).toBe('john');
@@ -53,7 +51,7 @@ test('shoud get form data with nested array', async () => {
     ['tables-5', 'Table 5'],
   ]);
   const request = { formData: () => map } as unknown as Request;
-  const result = await get<{ name: string; tables: string[] }>(request);
+  const result = await getRequestData(request);
 
   expect(result.name).toBe('simon');
   expect(Array.isArray(result.tables)).toBeTruthy();
@@ -76,7 +74,7 @@ test('shoud get form data with deep nested array', async () => {
     ['tables-3-id', 'table-4-id'],
   ]);
   const request = { formData: () => map } as unknown as Request;
-  const result = await get<{ name: string; tables: { name: string; id: string }[] }>(request);
+  const result = await getRequestData(request);
 
   expect(result.name).toBe('simon');
   expect(Array.isArray(result.tables)).toBeTruthy();
@@ -97,7 +95,7 @@ test('shoud get form data with flat array', async () => {
     ['3-id', 'table-4-id'],
   ]);
   const request = { formData: () => map } as unknown as Request;
-  const result = await get<{ name: string; id: string }[]>(request);
+  const result = await getRequestData(request);
 
   expect(Array.isArray(result)).toBeTruthy();
   expect(result?.[0]?.name).toBe('Table 1');

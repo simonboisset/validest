@@ -13,7 +13,7 @@ import s, {
   validate,
 } from '@ts-v/core';
 
-export { validateRequest } from './validateRequest';
+export { validateRequest } from './server/validateRequest';
 export type { Errors, Schema };
 export { array, date, int, maybe, number, object, oneOf, parseNumber, string, validate };
 export default s;

@@ -12,7 +12,7 @@ import s, {
   parseNumber,
   validate,
 } from '@ts-v/core';
-export { useFormValidation } from './useFormValidation';
+export { useTsvForm } from './useTsvForm';
 
 export type { Errors, Schema };
 export { array, date, int, maybe, number, object, oneOf, parseNumber, string, validate };
