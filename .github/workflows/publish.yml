@@ -33,6 +33,17 @@ jobs:
           git config --local user.name "simonboisset"
           cd core
           yarn
+          yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
+          yarn build
+          yarn publish --access public
+          cd ../react
+          yarn add @ts-v/core
+          yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
+          yarn build
+          yarn publish --access public
+          git push
+          cd ../remix
+          yarn add @ts-v/core
           yarn version --new-version ${{github.event.inputs.release}} --message "v%s"
           yarn build
           yarn publish --access public
