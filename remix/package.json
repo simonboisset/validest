@@ -1,6 +1,6 @@
 {
   "name": "@ts-v/remix",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Typed schema validation for remix stack",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -39,6 +39,6 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {
-    "@ts-v/core": "^0.0.3"
+    "@ts-v/core": "^0.0.4"
   }
 }

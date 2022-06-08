@@ -1,6 +1,6 @@
 {
   "name": "@ts-v/react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -46,6 +46,6 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@ts-v/core": "^0.0.2"
+    "@ts-v/core": "^0.0.4"
   }
 }
