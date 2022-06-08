@@ -47,5 +47,14 @@
   },
   "dependencies": {
     "@ts-v/core": "^0.0.4"
-  }
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "form",
+    "validation",
+    "schema",
+    "form-validation",
+    "react-form-validation"
+  ]
 }

@@ -41,18 +41,18 @@ type Data = {
 
 ## Quick start
 
-Installation :
+### Installation
 
 ```sh
 yarn add @ts-v/react
 ```
 
-Code :
+### useTsvForm
 
 ```tsx
-import { array, number, object, maybe oneOf, string, validate ,useFormValidation } from '@ts-v/react';
+import { array, number, object, maybe oneOf, string, validate ,useTsvForm } from '@ts-v/react';
 // default import also works
-import s , { useFormValidation }from '@ts-v/react';
+import s , { useTsvForm }from '@ts-v/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -60,8 +60,8 @@ const schema = object({
   contacts: array(object({ userId: string('Your contact must be defined'), text: maybe(string()) }));
 })
 
-const Comonent =()=>{
-  const { errors, onSubmit } = useFormValidation(schema,(data,e) =>{
+const Component =()=>{
+  const { errors, onSubmit } = useTsvForm(schema,(data,e) =>{
   // make that you want after validation
 })
 return (
@@ -82,3 +82,29 @@ return (
 ```
 
 The returned value of validate function will be typed.
+
+### Valide on change
+
+You can also valide your form on change
+
+```ts
+const Component =()=>{
+  const { errors, onChange } = useTsvForm(schema,(data,e) =>{
+  // make that you want after validation
+})
+return (
+  <form onChange={onChange}>
+    <input name='name-lastname'/>
+    {errors?.name?.lastname && <div>{errors.name.lastname}<div>}
+    <input name='name-firstname'/>
+    <input name='age'/>
+    {errors?.age && <div>{errors.age}<div>}
+    <input name='contacts-0-userId'/>
+    <input name='contacts-0-text'/>
+    <input name='contacts-1-userId'/>
+    <input name='contacts-1-text'/>
+    {errors?.contacts?.[1]?.text && <div>{errors.contacts.[1].text}<div>}
+    <button type='submit'>Submit</button>
+  </form>
+)}
+```
