@@ -23,5 +23,11 @@ export const useTsvFetcher = <T>(schema: Schema<T>) => {
       setErrors(error);
     }
   };
-  return { onSubmit, onChange, errors: errors || fetcherData?.errors, data: fetcherData?.data, ...fetcher };
+  return {
+    onSubmit,
+    onChange,
+    errors: errors || (fetcherData?.errors as Errors<T> | undefined),
+    data: fetcherData?.data,
+    ...fetcher,
+  };
 };

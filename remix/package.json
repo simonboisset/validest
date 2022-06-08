@@ -30,6 +30,7 @@
     "printWidth": 120
   },
   "devDependencies": {
+    "@remix-run/node": "^1.5.1",
     "@remix-run/react": "^1.5.1",
     "@swc/core": "^1.2.197",
     "@swc/jest": "^0.2.21",
@@ -44,6 +45,7 @@
     "typescript": "^4.7.3"
   },
   "peerDependencies": {
+    "@remix-run/node": "^1.5.1",
     "@remix-run/react": "^1.5.1",
     "react": ">=16"
   },

@@ -24,5 +24,10 @@ export const useTsvAction = <T>(schema: Schema<T>) => {
       setErrors(error);
     }
   };
-  return { onSubmit, onChange, errors: errors || actionData?.errors, data: actionData?.data };
+  return {
+    onSubmit,
+    onChange,
+    errors: errors || (actionData?.errors as Errors<T> | undefined),
+    data: actionData?.data,
+  };
 };

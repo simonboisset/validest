@@ -91,11 +91,7 @@ In ActionFunction you can validate the data of the request with same schema and 
 
 ```ts
 export const action: ActionFunction = ({ request }) => {
-  try {
-    const data = validateRequest(request, schema);
-    // your data is validated and typed
-  } catch (error) {
-    throw json({ error }, { status: 400 });
-  }
+  const data = validateRequest(request, schema);
+  // your data is validated and typed
 };
 ```

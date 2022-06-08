@@ -12,7 +12,7 @@ export const useTsvForm = <T>(
     try {
       const data = validate(getFormData<T>(e.target), schema);
       if (!!afterValidate) {
-        await afterValidate(data, e);
+        afterValidate(data, e);
       }
     } catch (error: any) {
       setErrors(error);
