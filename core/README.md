@@ -7,15 +7,15 @@ Validation schema for typescript.
 Installation :
 
 ```sh
-yarn add typed-schema-validation
+yarn add @ts-v/core
 ```
 
 Code :
 
 ```ts
-import { array, number, object, oneOf, string, validate } from 'typed-schema-validation';
+import { array, number, object, oneOf, string, validate } from '@ts-v/core';
 // default import also works
-import s from 'typed-schema-validation';
+import s from '@ts-v/core';
 
 // Unknown params
 const params = {
@@ -49,7 +49,7 @@ The returned value of validate function will be typed.
 Il params don't pass validation it will throw error as a similar object with keys params and string error values.
 
 ```ts
-import { array, number, object, oneOf, string, validate } from 'typed-schema-validation';
+import { array, number, object, oneOf, string, validate } from '@ts-v/core';
 // Unknown params
 const params = {
   name: 'joe',
@@ -69,7 +69,7 @@ try {
         role: string(),
         age: number(),
       }),
-    }),
+    })
   );
 } catch (error) {
   error = {
@@ -134,7 +134,7 @@ const { name, age } = validate(
   object({
     name: string(),
     age: number(),
-  }),
+  })
 );
 ```
 
@@ -152,7 +152,7 @@ age = undefined;
 You can also right your own schema. The only rule is tu return a Schema type with you desired type in generic type.
 
 ```ts
-import type { Schema } from 'typed-schema-validation';
+import type { Schema } from '@ts-v/core';
 ```
 
 Schema type is a function that take an unkown value and return an object `{ data , error }`. If value is good error must undefined, if it's not data must be undefined.

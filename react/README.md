@@ -1,176 +1,84 @@
-# Typescript validation
+# Typescript validation for react form
 
 Validation schema for typescript.
+
+## Concept
+
+This package take some conventions which are listed below :
+
+### Uncontroled inputs
+
+You don't need to control your input value to validate your form values on submit. However you can also use controled input but this will not have any impact of validation step.
+
+### Use name propertie of inputs
+
+To have access to form values without input control you must use the name propertie of each input.
+If you have any value wich is not a real input value you must add an hidden input with the name you want.
+
+### Name convention
+
+Your form value will be an object with keys as each input names in your form.
+You can define nested object and array with '-' in your name like this :
+
+```ts
+// List of you inputs names
+'name-lastname';
+'name-firstname';
+'age';
+'contacts-0-userId';
+'contacts-0-text';
+'contacts-1-userId';
+'contacts-1-text';
+
+// Your data will be like this
+
+type Data = {
+  name: { lastname: string; firstname: string };
+  age: string;
+  contacts: [{ userId: string; text: string }, { userId: string; text: string }];
+};
+```
 
 ## Quick start
 
 Installation :
 
 ```sh
-yarn add typed-schema-validation
+yarn add @ts-v/react
 ```
 
 Code :
 
-```ts
-import { array, number, object, oneOf, string, validate } from 'typed-schema-validation';
+```tsx
+import { array, number, object, maybe oneOf, string, validate ,useFormValidation } from '@ts-v/react';
 // default import also works
-import s from 'typed-schema-validation';
+import s , { useFormValidation }from '@ts-v/react';
 
-// Unknown params
-const params = {
-  name: 'joe',
-  profile: {
-    name: { firstname: 'john', lastname: 'doe' },
-    role: 'ADMIN',
-    age: '25',
-  },
-};
+const schema = object({
+  name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
+  age: number('Please enter a number for your age'),
+  contacts: array(object({ userId: string('Your contact must be defined'), text: maybe(string()) }));
+})
 
-const { name, profile } = validate(
-  params,
-  object({
-    name: string(),
-    profile: object({
-      name: object({ firstname: string(), lastname: string() }),
-      role: string(),
-      age: number(),
-    }),
-  })
-
-  profile.age = 25
-);
+const Comonent =()=>{
+  const { errors, onSubmit } = useFormValidation(schema,(data,e) =>{
+  // make that you want after validation
+})
+return (
+  <form onSubmit={onSubmit}>
+    <input name='name-lastname'/>
+    {errors?.name?.lastname && <div>{errors.name.lastname}<div>}
+    <input name='name-firstname'/>
+    <input name='age'/>
+    {errors?.age && <div>{errors.age}<div>}
+    <input name='contacts-0-userId'/>
+    <input name='contacts-0-text'/>
+    <input name='contacts-1-userId'/>
+    <input name='contacts-1-text'/>
+    {errors?.contacts?.[1]?.text && <div>{errors.contacts.[1].text}<div>}
+    <button type='submit'>Submit</button>
+  </form>
+)}
 ```
 
 The returned value of validate function will be typed.
-
-## Validation errors
-
-Il params don't pass validation it will throw error as a similar object with keys params and string error values.
-
-```ts
-import { array, number, object, oneOf, string, validate } from 'typed-schema-validation';
-// Unknown params
-const params = {
-  name: 'joe',
-  profile: {
-    name: { firstname: 'john', lastname: 'doe' },
-    role: 'ADMIN',
-    age: 'not-a-number',
-  },
-};
-try {
-  const { name, profile } = validate(
-    params,
-    object({
-      name: string(),
-      profile: object({
-        name: object({ firstname: string(), lastname: string() }),
-        role: string(),
-        age: number(),
-      }),
-    }),
-  );
-} catch (error) {
-  error = {
-    age: 'number',
-  };
-}
-```
-
-## Type schema
-
-Here is the core typed schemas. Each schema is un function wich return a object with data or error.
-
-### string
-
-Value will be string with length > 0
-
-```ts
-const name = validate('hello', string());
-```
-
-### oneOf
-
-Parameter takes array of string in parameter ans value will be typed with element of this array.
-
-```ts
-const role = validate('ADMIN', oneOf(['ADMIN', 'MANAGER'] as Role[]));
-```
-
-### number
-
-Value will be a number.
-
-```ts
-const height = validate('150.5', number());
-height = 150.5;
-```
-
-### int
-
-Value will be an integer (number type).
-
-```ts
-const age = validate('25', int());
-age = 25;
-```
-
-### array
-
-Parameter takes another schema to defined type element of this array. Value will be an array of the nested schema.
-
-```ts
-const [age1, age2, age3, age4] = validate(['25', '32', '43', '56'], array(int()));
-```
-
-### object
-
-Parameter takes an object with key of input keys. Value of this object must be others schema to define values of input object.
-
-```ts
-const { name, age } = validate(
-  { name: 'john', age: '25' },
-  object({
-    name: string(),
-    age: number(),
-  }),
-);
-```
-
-### maybe
-
-Parameter takes another schema to defined the type. Value will be type of the nested schema or undefined.
-
-```ts
-const age = validate(undefined, maybe(int()));
-age = undefined;
-```
-
-### Custom schema
-
-You can also right your own schema. The only rule is tu return a Schema type with you desired type in generic type.
-
-```ts
-import type { Schema } from 'typed-schema-validation';
-```
-
-Schema type is a function that take an unkown value and return an object `{ data , error }`. If value is good error must undefined, if it's not data must be undefined.
-
-Exemple for a password :
-
-```ts
-export const password =
-  (error?: string): Schema<string> =>
-  (value) => {
-    return typeof value === 'string' && value.length > 8 ? { data: value } : { errors: error || 'password' };
-  };
-```
-
-### Custom error
-
-Each schema can take custom error message in parameter.
-
-```ts
-const height = validate('150.5', number('This is a custom message for this value'));
-```
