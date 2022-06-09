@@ -1,10 +1,9 @@
 {
-  "include": ["src/index.ts", "src/react/index.ts", "src/node/index.ts"],
+  "include": ["src"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "outDir": ".",
     "declaration": true,
     "rootDir": "src",
     "strict": true,
