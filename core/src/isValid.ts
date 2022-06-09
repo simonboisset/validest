@@ -1,6 +1,6 @@
 import { Schema } from './object';
 
-export const isValid = <T>(params: unknown, schema: Schema<T>) => {
+export const isValid = <T>(params: unknown, schema: Schema<T>): params is T => {
   const { errors, data } = schema(params);
 
   if (!data || (errors && Object.values(errors).length)) {
