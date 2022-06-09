@@ -1,9 +1,5 @@
 export type Errors<T> = T extends Record<string, any> ? { [K in keyof T]?: Errors<T[K]> } : string;
-export type Schema<T> = (
-  data: unknown,
-) => T extends Array<infer I>
-  ? { errors: (Errors<I> | undefined)[]; data: (I | undefined)[] } | { errors: undefined; data: I[] }
-  : { errors: Errors<T>; data: undefined } | { errors: undefined; data: T };
+export type Schema<T> = (data: unknown) => { errors: Errors<T>; data: undefined } | { errors: undefined; data: T };
 
 type ObjectParam<T> = { [K in keyof T]: Schema<T[K]> };
 

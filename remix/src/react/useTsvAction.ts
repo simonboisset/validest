@@ -6,22 +6,22 @@ import { getFormData } from '../data/getFormData';
 export const useTsvAction = <T>(schema: Schema<T>) => {
   const actionData = useActionData();
   const [errors, setErrors] = useState<Errors<T>>();
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      validate(getFormData(e.target), schema);
+    const { errors } = schema(getFormData(e.target));
+    if (errors) {
+      setErrors(errors);
+    } else {
       setErrors(undefined);
       e.currentTarget.submit();
-    } catch (error: any) {
-      setErrors(error);
     }
   };
-  const onChange = async (e: React.FormEvent<HTMLFormElement>) => {
-    try {
-      validate(getFormData(e.target), schema);
+  const onChange = (e: React.FormEvent<HTMLFormElement>) => {
+    const { errors } = schema(getFormData(e.target));
+    if (errors) {
+      setErrors(errors);
+    } else {
       setErrors(undefined);
-    } catch (error: any) {
-      setErrors(error);
     }
   };
   return {

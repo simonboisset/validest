@@ -1,19 +1,3 @@
-import s, {
-  Errors,
-  Schema,
-  array,
-  date,
-  int,
-  maybe,
-  number,
-  object,
-  oneOf,
-  string,
-  parseNumber,
-  validate,
-  isValid,
-} from '@ts-v/core';
-
-export type { Errors, Schema };
-export { array, date, int, maybe, number, object, oneOf, parseNumber, string, validate, isValid };
+import s from '@ts-v/core';
+export * from '@ts-v/core';
 export default s;
