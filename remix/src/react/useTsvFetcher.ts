@@ -7,9 +7,9 @@ export const useTsvFetcher = <T>(schema: Schema<T>) => {
   const { data: fetcherData, ...fetcher } = useFetcher();
   const [errors, setErrors] = useState<Errors<T>>();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
     const { errors } = schema(getFormData(e.target));
     if (errors) {
+      e.preventDefault();
       setErrors(errors);
     } else {
       setErrors(undefined);

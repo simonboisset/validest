@@ -7,9 +7,9 @@ export const useTsvAction = <T>(schema: Schema<T>) => {
   const actionData = useActionData();
   const [errors, setErrors] = useState<Errors<T>>();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
     const { errors } = schema(getFormData(e.target));
     if (errors) {
+      e.preventDefault();
       setErrors(errors);
     } else {
       setErrors(undefined);
