@@ -661,10 +661,10 @@
   dependencies:
     "@jest/create-cache-key-function" "^27.4.2"
 
-"@ts-v/core@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@ts-v/core/-/core-0.1.5.tgz#b7621faec9ff88811f64119f2225755cf0fcd0ff"
-  integrity sha512-YFTJANurgI/2dbRxfn09DF0kg0JCRw7xyJyk11SRyXEs508k5SiyggHEu1hCDvuUjsKHedC2UGt9mUMW3pmDXA==
+"@ts-v/core@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@ts-v/core/-/core-0.1.6.tgz#17786f91c09d5f42b71d77270da75a368f25d89d"
+  integrity sha512-oM/qvnqCrQNggHRz22WWrVLN7l6tjl+PSsneOkAHkAwm+BrXjNN5UKC3cdW//c2MkwBqirYp6x8q5XIKPOLjTg==
 
 "@types/babel__core@^7.1.14":
   version "7.1.19"
