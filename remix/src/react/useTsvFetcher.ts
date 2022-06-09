@@ -13,7 +13,6 @@ export const useTsvFetcher = <T>(schema: Schema<T>) => {
       setErrors(errors);
     } else {
       setErrors(undefined);
-      e.currentTarget.submit();
     }
   };
   const onChange = (e: React.FormEvent<HTMLFormElement>) => {
