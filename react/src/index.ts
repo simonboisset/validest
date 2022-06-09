@@ -1,20 +1,5 @@
-import s, {
-  Errors,
-  Schema,
-  array,
-  date,
-  int,
-  maybe,
-  number,
-  object,
-  oneOf,
-  string,
-  parseNumber,
-  validate,
-  isValid,
-} from '@ts-v/core';
+import s from '@ts-v/core';
+export * from '@ts-v/core';
 export { useTsvForm } from './useTsvForm';
 
-export type { Errors, Schema };
-export { array, date, int, maybe, number, object, oneOf, parseNumber, string, validate, isValid };
 export default s;
