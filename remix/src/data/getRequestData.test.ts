@@ -103,3 +103,23 @@ test('shoud get form data with flat array', async () => {
   expect(result?.[1]?.name).toBe('Table 2');
   expect(result?.[1]?.id).toBe('table-2-id');
 });
+test('shoud get form data with flat array', async () => {
+  const map = new Map([
+    ['0-name', 'Table 1'],
+    ['0-id', 'table-1-id'],
+    ['1-name', 'Table 2'],
+    ['1-id', 'table-2-id'],
+    ['2-name', 'Table 3'],
+    ['2-id', 'table-3-id'],
+    ['3-name', 'Table 4'],
+    ['3-id', 'table-4-id'],
+  ]);
+  const request = { formData: () => map } as unknown as Request;
+  const result = await getRequestData(request);
+
+  expect(Array.isArray(result)).toBeTruthy();
+  expect(result?.[0]?.name).toBe('Table 1');
+  expect(result?.[0]?.id).toBe('table-1-id');
+  expect(result?.[1]?.name).toBe('Table 2');
+  expect(result?.[1]?.id).toBe('table-2-id');
+});

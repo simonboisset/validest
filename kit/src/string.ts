@@ -1,4 +1,4 @@
-import type { Schema } from './object';
+import { Schema } from '@ts-v/core';
 
 export const string =
   (error?: string): Schema<string> =>

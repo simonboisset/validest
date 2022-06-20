@@ -1,6 +1,5 @@
-import { number } from './number';
+import { number, string } from './array.test';
 import { object } from './object';
-import { string } from './string';
 
 test('email returns data object', () => {
   const obj = { name: 'Simon', age: '25', password: 'foo' };

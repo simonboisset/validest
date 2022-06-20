@@ -1,5 +1,12 @@
-import { parseNumber } from '@ts-v/core';
 import { Data } from './getRequestData';
+
+export const parseNumber = (value: unknown) => {
+  const n = typeof value === 'string' ? (!value ? undefined : Number(value.replace(',', '.'))) : value;
+  if (typeof n !== 'number' || (n !== 0 && !n)) {
+    return undefined;
+  }
+  return n;
+};
 
 export const mapFormData = (data: Data<any>, key: string, value: string | undefined) => {
   const [firstKey, ...nestedKeys] = key.split('-');

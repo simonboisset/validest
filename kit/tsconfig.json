@@ -1,11 +1,10 @@
 {
   "include": ["src"],
-  "exclude": ["src/**/*.test.ts"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "outDir": ".",
+    "outDir": "dist",
     "declaration": true,
     "rootDir": "src",
     "strict": true,
