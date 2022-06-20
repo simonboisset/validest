@@ -4,8 +4,7 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "outFile": "dist/index.js",
+    "lib": ["dom", "esnext"],
     "outDir": "dist",
     "declaration": true,
     "rootDir": "src",

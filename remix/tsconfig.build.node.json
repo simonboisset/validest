@@ -5,7 +5,6 @@
     "module": "esnext",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "outFile": "dist/node/index.js",
     "outDir": "dist/node",
     "declaration": true,
     "rootDir": "src",
