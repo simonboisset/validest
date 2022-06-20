@@ -20,10 +20,6 @@ yarn add @ts-v/remix
 ### useTsvAction
 
 ```tsx
-import { array, number, object, maybe oneOf, string, validate } from '@ts-v/remix';
-// default import also works
-import s from '@ts-v/remix';
-
 import { useTsvAction }from '@ts-v/remix/react';
 
 const schema = object({

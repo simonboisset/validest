@@ -13,9 +13,8 @@ yarn add @ts-v/core
 Code :
 
 ```ts
-import { array, number, object, oneOf, string, validate } from '@ts-v/core';
-// default import also works
-import s from '@ts-v/core';
+import { array, object, validate } from '@ts-v/core';
+import { number, oneOf, string } from '@ts-v/kit';
 
 // Unknown params
 const params = {
@@ -46,10 +45,12 @@ The returned value of validate function will be typed.
 
 ## Validation errors
 
-Il params don't pass validation it will throw error as a similar object with keys params and string error values.
+If params don't pass validation it will throw error as a similar object with keys params and string error values.
 
 ```ts
-import { array, number, object, oneOf, string, validate } from '@ts-v/core';
+import { array, object, validate } from '@ts-v/core';
+import { number, oneOf, string } from '@ts-v/kit';
+
 // Unknown params
 const params = {
   name: 'joe',
@@ -82,40 +83,6 @@ try {
 
 Here is the core typed schemas. Each schema is un function wich return a object with data or error.
 
-### string
-
-Value will be string with length > 0
-
-```ts
-const name = validate('hello', string());
-```
-
-### oneOf
-
-Parameter takes array of string in parameter ans value will be typed with element of this array.
-
-```ts
-const role = validate('ADMIN', oneOf(['ADMIN', 'MANAGER'] as Role[]));
-```
-
-### number
-
-Value will be a number.
-
-```ts
-const height = validate('150.5', number());
-height = 150.5;
-```
-
-### int
-
-Value will be an integer (number type).
-
-```ts
-const age = validate('25', int());
-age = 25;
-```
-
 ### array
 
 Parameter takes another schema to defined type element of this array. Value will be an array of the nested schema.
@@ -138,14 +105,9 @@ const { name, age } = validate(
 );
 ```
 
-### maybe
+### Starter kit
 
-Parameter takes another schema to defined the type. Value will be type of the nested schema or undefined.
-
-```ts
-const age = validate(undefined, maybe(int()));
-age = undefined;
-```
+To start with the base shemas you can use [@ts-v/kit](../kit/README.md)
 
 ### Custom schema
 

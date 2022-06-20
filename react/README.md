@@ -50,9 +50,7 @@ yarn add @ts-v/react
 ### useTsvForm
 
 ```tsx
-import { array, number, object, maybe oneOf, string, validate ,useTsvForm } from '@ts-v/react';
-// default import also works
-import s , { useTsvForm }from '@ts-v/react';
+import { useTsvForm } from '@ts-v/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
