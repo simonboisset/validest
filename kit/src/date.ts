@@ -1,4 +1,4 @@
-import { Schema } from './object';
+import { Schema } from '@ts-v/core';
 
 export const date =
   (error?: string): Schema<Date> =>

@@ -1,5 +1,5 @@
 import { useActionData } from '@remix-run/react';
-import { Errors, Schema, validate } from '@ts-v/core';
+import { Errors, Schema } from '@ts-v/core';
 import { useState } from 'react';
 import { getFormData } from '../data/getFormData';
 

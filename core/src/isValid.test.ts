@@ -1,9 +1,7 @@
 import { array } from './array';
-import { date } from './date';
-import { int, number } from './number';
 import { object } from './object';
-import { oneOf, string } from './string';
 import { isValid } from './isValid';
+import { date, int, number, oneOf, string } from './array.test';
 
 test('shoud validate form data', () => {
   const params = {

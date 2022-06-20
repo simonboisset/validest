@@ -1,4 +1,4 @@
-import type { Schema } from './object';
+import { Schema } from '@ts-v/core';
 
 export const maybe =
   <T>(schema: Schema<T>): Schema<T | undefined> =>

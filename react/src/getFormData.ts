@@ -1,4 +1,10 @@
-import { parseNumber } from '@ts-v/core';
+const parseNumber = (value: unknown) => {
+  const n = typeof value === 'string' ? (!value ? undefined : Number(value.replace(',', '.'))) : value;
+  if (typeof n !== 'number' || (n !== 0 && !n)) {
+    return undefined;
+  }
+  return n;
+};
 
 export type Data<T> = {
   [P in keyof T]?: T[P] extends string[] ? string[] : T[P] extends Record<string, any> ? Data<T[P]> : string;

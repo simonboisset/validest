@@ -37,13 +37,17 @@ jobs:
           yarn build
           yarn publish --access public
           cd ../react
-          yarn add @ts-v/core
+          yarn add --dev @ts-v/core
           yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
           yarn build
           yarn publish --access public
-          git push
           cd ../remix
-          yarn add @ts-v/core
+          yarn add --dev @ts-v/core
+          yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
+          yarn build
+          yarn publish --access public
+          cd ../kit
+          yarn add --dev @ts-v/core
           yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
           yarn build
           yarn publish --access public

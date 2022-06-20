@@ -1,4 +1,4 @@
-import type { Schema } from './object';
+import { Schema } from '@ts-v/core';
 
 export const parseNumber = (value: unknown) => {
   const n = typeof value === 'string' ? (!value ? undefined : Number(value.replace(',', '.'))) : value;
