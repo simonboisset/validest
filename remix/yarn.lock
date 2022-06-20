@@ -745,10 +745,10 @@
   dependencies:
     "@jest/create-cache-key-function" "^27.4.2"
 
-"@ts-v/core@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@ts-v/core/-/core-0.1.8.tgz#78d8ac25732db362c64f2d4d2e9ca4a7601f83e2"
-  integrity sha512-mzrgdJAYMDARjBQLYtxPWgW/WCEXK6Sqm0q1dK1y3S63sI7NwUZzHTqxj3tY2tzQl5kfBVJQeRXLAknKjRNjEg==
+"@ts-v/core@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@ts-v/core/-/core-0.1.10.tgz#8d51c1885e9b6a9bf7e4d119b7a89caedb2a5209"
+  integrity sha512-wTWN5zgahCSdMXlVNsZ5tWw/FEeY9YZyXXx/B90Zqjw02YTa4x7ojUW48/xd2GMGTyKqO/kVHjdFvJttlVl/JA==
 
 "@types/babel__core@^7.1.14":
   version "7.1.19"
