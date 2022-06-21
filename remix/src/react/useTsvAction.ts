@@ -27,6 +27,6 @@ export const useTsvAction = <T>(schema: Schema<T>) => {
     onSubmit,
     onChange,
     errors: errors || (actionData?.errors as Errors<T> | undefined),
-    data: actionData?.data,
+    data: actionData,
   };
 };

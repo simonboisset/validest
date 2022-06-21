@@ -1,25 +1,18 @@
-import type { ActionFunction } from '@remix-run/node';
-import { object } from '@ts-v/core';
-import s from '@ts-v/kit';
+import { Form } from '@remix-run/react';
 import { useTsvAction } from '@ts-v/remix/dist/react';
-import { validateRequest } from '@ts-v/remix/dist/node';
+import { actionValidation } from '~/action.server';
+import { schema } from '~/schema';
 
-const schema = object({
-  name: s.string('Please enter your name'),
-  age: s.number('Please enter your age'),
-});
-
-export const action: ActionFunction = ({ request }) => {
-  const data = validateRequest(request, schema);
-  return data;
-};
+export const action = actionValidation;
 
 export default function Index() {
   const { onSubmit, errors, data } = useTsvAction(schema);
+  console.log(data);
+
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
       <h1>Welcome to Remix</h1>
-      <form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit} method='post'>
         <div>
           <input name='name' placeholder='name' />
           <div style={{ fontSize: 12, color: 'red' }}>{errors?.name || null}</div>
@@ -29,7 +22,7 @@ export default function Index() {
           <div style={{ fontSize: 12, color: 'red' }}>{errors?.age || null}</div>
         </div>
         <button type='submit'>Submit</button>
-      </form>
+      </Form>
       {data && (
         <div style={{ color: 'green' }}>
           Welcome {data.name}! You are {data.age} years hold

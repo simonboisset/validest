@@ -1,5 +1,5 @@
 import { json } from '@remix-run/node';
-import { Schema } from '@ts-v/core';
+import type { Schema } from '@ts-v/core';
 import { getRequestData } from '../data/getRequestData';
 
 export const validateRequest = async <T>(request: Request, schema: Schema<T>): Promise<T> => {
