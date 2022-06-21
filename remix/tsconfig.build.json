@@ -1,11 +1,11 @@
 {
-  "include": ["src/node"],
+  "include": ["src"],
   "exclude": ["src/**/*.test.ts"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "outDir": "dist/node",
+    "outDir": "dist",
     "declaration": true,
     "rootDir": "src",
     "strict": true,
