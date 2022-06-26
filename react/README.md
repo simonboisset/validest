@@ -44,7 +44,7 @@ type Data = {
 ### Installation
 
 ```sh
-yarn add @ts-v/react
+yarn add @ts-v/core @ts-v/react @ts-v/kit
 ```
 
 ### useTsvForm
@@ -60,7 +60,7 @@ const schema = object({
 
 const Component =()=>{
   const { errors, onSubmit } = useTsvForm(schema,(data,e) =>{
-  // make that you want after validation
+  // make what you want after validation
 })
 return (
   <form onSubmit={onSubmit}>
