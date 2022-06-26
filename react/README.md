@@ -21,7 +21,7 @@ Your form value will be an object with keys as each input names in your form.
 You can define nested object and array with '-' in your name like this :
 
 ```ts
-// List of you inputs names
+// List of your inputs names
 'name-lastname';
 'name-firstname';
 'age';
@@ -60,7 +60,7 @@ const schema = object({
 
 const Component =()=>{
   const { errors, onSubmit } = useTsvForm(schema,(data,e) =>{
-  // make what you want after validation
+  // do what you want after validation
 })
 return (
   <form onSubmit={onSubmit}>
