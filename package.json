@@ -8,6 +8,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "publish:major": "turbo run publish:major",
+    "publish:minor": "turbo run publish:minor",
+    "publish:patch": "turbo run publish:patch",
     "dev": "turbo run dev --parallel",
     "test": "jest",
     "test-ci": "jest --config=./jest-ci.config.js",

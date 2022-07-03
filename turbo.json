@@ -4,6 +4,24 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "version:major": {
+      "dependsOn": []
+    },
+    "version:minor": {
+      "dependsOn": []
+    },
+    "version:patch": {
+      "dependsOn": []
+    },
+    "publish:major": {
+      "dependsOn": ["version:major", "build"]
+    },
+    "publish:minor": {
+      "dependsOn": ["version:minor", "build"]
+    },
+    "publish:patch": {
+      "dependsOn": ["version:patch", "build"]
+    },
     "lint": {
       "outputs": []
     },

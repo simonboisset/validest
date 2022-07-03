@@ -1,5 +1,6 @@
 {
   "name": "builder",
+  "private": true,
   "version": "0.0.0",
   "bin": "index.js",
   "license": "MIT",
@@ -10,8 +11,5 @@
   "peerDependencies": {
     "esbuild": "^0.14.42",
     "esbuild-node-externals": "^1.4.1"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

@@ -8,12 +8,18 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && yarn builder && tsc --project tsconfig.build.json"
+    "build": "rm -rf dist && builder && tsc --project tsconfig.build.json",
+    "version:major": "yarn version --new-version major --no-git-tag-version",
+    "version:minor": "yarn version --new-version minor --no-git-tag-version",
+    "version:patch": "yarn version --new-version patch --no-git-tag-version",
+    "publish:major": "yarn publish --access public",
+    "publish:minor": "yarn publish --access public",
+    "publish:patch": "yarn publish --access public"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/simonboisset/ts-v",
-    "directory": "kit"
+    "directory": "packages/kit"
   },
   "bugs": {
     "url": "https://github.com/simonboisset/ts-v/issues"
@@ -27,10 +33,10 @@
     "printWidth": 120
   },
   "devDependencies": {
-    "@ts-v/core": "^0.2.2",
+    "@ts-v/core": "*",
+    "builder": "*",
     "esbuild": "^0.14.42",
     "esbuild-node-externals": "^1.4.1",
-    "builder": "*",
     "typescript": "^4.7.3"
   },
   "keywords": [
