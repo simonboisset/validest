@@ -1,0 +1,62 @@
+{
+  "name": "@ts-v/remix",
+  "version": "0.2.2",
+  "description": "Typed schema validation for remix stack",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && yarn builder && tsc --project tsconfig.build.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonboisset/ts-v",
+    "directory": "remix-react"
+  },
+  "bugs": {
+    "url": "https://github.com/simonboisset/ts-v/issues"
+  },
+  "homepage": "https://github.com/simonboisset/ts-v",
+  "author": "Simon Boisset <simonboisset.dev@gmail.com>",
+  "license": "MIT",
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "@remix-run/node": "^1.5.1",
+    "@remix-run/react": "^1.5.1",
+    "@swc/core": "^1.2.197",
+    "@swc/jest": "^0.2.21",
+    "@ts-v/core": "^0.2.2",
+    "@types/jest": "^28.1.1",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "esbuild": "^0.14.42",
+    "esbuild-node-externals": "^1.4.1",
+    "builder": "*",
+    "jest": "^28.1.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "typescript": "^4.7.3"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^1.5.1",
+    "@remix-run/react": "^1.5.1",
+    "react": ">=16"
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "remix",
+    "form",
+    "validation",
+    "schema",
+    "form-validation",
+    "remix-form",
+    "remix-form-validation"
+  ]
+}
