@@ -31,26 +31,9 @@ jobs:
         run: |
           git config --local user.email "simonboisset.dev@gmail.com"
           git config --local user.name "simonboisset"
-          cd core
           yarn
+          yarn publish:${{github.event.inputs.release}}
           yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
-          yarn build
-          yarn publish --access public
-          cd ../react
-          yarn add --dev @ts-v/core
-          yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
-          yarn build
-          yarn publish --access public
-          cd ../remix
-          yarn add --dev @ts-v/core
-          yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
-          yarn build
-          yarn publish --access public
-          cd ../kit
-          yarn add --dev @ts-v/core
-          yarn version --new-version ${{github.event.inputs.release}} --no-git-tag-version
-          yarn build
-          yarn publish --access public
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
           git commit -a -m "v${PACKAGE_VERSION}"
           git push
