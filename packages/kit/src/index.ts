@@ -1,8 +1,9 @@
-import { date } from './date';
-import { maybe } from './maybe';
-import { int, number, parseNumber } from './number';
-import { oneOf, string } from './string';
+import date from '@ts-v/date';
+import int from '@ts-v/int';
+import maybe from '@ts-v/maybe';
+import number from '@ts-v/number';
+import oneOf from '@ts-v/one-of';
+import string from '@ts-v/string';
+export * from '@ts-v/core';
 
-const s = { date, int, maybe, number, string, oneOf };
-export { date, int, maybe, number, string, oneOf, parseNumber };
-export default s;
+export { date, int, maybe, number, string, oneOf };

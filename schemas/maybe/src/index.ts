@@ -1,6 +1,6 @@
-import { Schema } from '@ts-v/core';
+import type { Schema } from '@ts-v/core';
 
-export const maybe =
+const maybe =
   <T>(schema: Schema<T>): Schema<T | undefined> =>
   (value: unknown) => {
     if (value === undefined) {
@@ -8,3 +8,4 @@ export const maybe =
     }
     return schema(value);
   };
+export default maybe;

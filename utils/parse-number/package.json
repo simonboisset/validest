@@ -1,5 +1,5 @@
 {
-  "name": "@ts-v/kit",
+  "name": "@ts-v/parse-number",
   "version": "0.2.5",
   "description": "Typed schema validation",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/simonboisset/ts-v",
-    "directory": "packages/kit"
+    "directory": "schemas/parse-number"
   },
   "bugs": {
     "url": "https://github.com/simonboisset/ts-v/issues"
@@ -31,15 +31,6 @@
     "singleQuote": true,
     "tabWidth": 2,
     "printWidth": 120
-  },
-  "dependencies": {
-    "@ts-v/core": "*",
-    "@ts-v/date": "*",
-    "@ts-v/int": "*",
-    "@ts-v/maybe": "*",
-    "@ts-v/number": "*",
-    "@ts-v/one-of": "*",
-    "@ts-v/string": "*"
   },
   "devDependencies": {
     "builder": "*",

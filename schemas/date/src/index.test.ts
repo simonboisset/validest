@@ -1,5 +1,6 @@
-import { maybe } from './maybe';
-import { date } from './date';
+import date from '.';
+import maybe from '@ts-v/maybe';
+
 test('string returns false for non-date', () => {
   expect(date()(undefined).errors).toBe('date');
   expect(date('date-error')(undefined).errors).toBe('date-error');

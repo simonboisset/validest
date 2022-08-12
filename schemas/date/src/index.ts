@@ -1,6 +1,6 @@
 import { Schema } from '@ts-v/core';
 
-export const date =
+const date =
   (error?: string): Schema<Date> =>
   (value) => {
     try {
@@ -17,3 +17,5 @@ export const date =
       return { errors: error || 'date' };
     }
   };
+
+export default date;

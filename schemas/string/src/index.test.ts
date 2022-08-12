@@ -1,5 +1,5 @@
-import { maybe } from './maybe';
-import { string, oneOf } from './string';
+import string from '.';
+import maybe from '@ts-v/maybe';
 
 test('string returns false for non-strings', () => {
   expect(string()(undefined).errors).toBe('string');
@@ -36,12 +36,4 @@ test('string returns true for strings', () => {
   expect(maybe(string())('1').data).toBe('1');
   expect(maybe(string())(undefined).data).toBeUndefined();
   expect(maybe(string())(undefined).errors).toBeUndefined();
-});
-
-test('one of test', () => {
-  expect(oneOf(['a', 'b', 'c'])('this-is-not-one-of').errors).toBe('oneOf');
-  expect(oneOf(['a', 'b', 'c'], 'one-of-error')('this-is-not-one-of').errors).toBe('one-of-error');
-  expect(oneOf(['a', 'b', 'c'])('a').data).toBe('a');
-  expect(oneOf(['a', 'b', 'c'])('b').data).toBe('b');
-  expect(oneOf(['a', 'b', 'c'])('c').data).toBe('c');
 });
