@@ -1,7 +1,12 @@
-import { array } from './array';
-import { object } from './object';
+import array from '@ts-v/array';
+import date from '@ts-v/date';
+import int from '@ts-v/int';
+import number from '@ts-v/number';
+import oneOf from '@ts-v/one-of';
+import string from '@ts-v/string';
+import object from '@ts-v/object';
+
 import { isValid } from './isValid';
-import { date, int, number, oneOf, string } from './array.test';
 
 test('shoud validate form data', () => {
   const params = {

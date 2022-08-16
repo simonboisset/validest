@@ -1,4 +1,4 @@
-import type { Errors, Schema } from './object';
+import type { Schema, Errors } from '@ts-v/core';
 
 export const array =
   <T>(schema: Schema<T>): Schema<T[]> =>

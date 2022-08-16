@@ -1,8 +1,11 @@
 ---
 sidebar_position: 2
+tags: [form validation, remix]
 ---
 
 # Remix
+
+Data validation for `remix`
 
 ## Conventions
 

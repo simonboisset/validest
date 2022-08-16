@@ -1,5 +1,5 @@
-import { array } from './array';
-import { Schema } from './object';
+import { array } from '.';
+import type { Schema } from '@ts-v/core';
 
 export const string =
   (error?: string): Schema<string> =>

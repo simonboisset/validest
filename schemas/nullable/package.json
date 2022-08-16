@@ -1,5 +1,5 @@
 {
-  "name": "@ts-v/maybe",
+  "name": "@ts-v/nullable",
   "version": "0.2.6",
   "description": "Typed schema validation",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && builder && tsc --project tsconfig.build.json",
+    "build": "rm -rf dist && builder && tsc",
     "version:major": "yarn version --new-version major --no-git-tag-version",
     "version:minor": "yarn version --new-version minor --no-git-tag-version",
     "version:patch": "yarn version --new-version patch --no-git-tag-version",
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/simonboisset/ts-v",
-    "directory": "schemas/maybe"
+    "directory": "schemas/nullable"
   },
   "bugs": {
     "url": "https://github.com/simonboisset/ts-v/issues"

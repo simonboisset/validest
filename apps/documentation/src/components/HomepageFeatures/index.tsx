@@ -14,7 +14,7 @@ export default function HomepageFeatures(): JSX.Element {
           <Feature
             title='Lightweight'
             Svg={require('@site/static/img/1kb.svg').default}
-            description='< 1kb for the core package. For coparaison yup is 30x larger.'
+            description='< 1kb for the core package. For comparaison yup is 30x larger.'
           />
           <Feature
             title='Customizable'

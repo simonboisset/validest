@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
+tags: [form validation, react]
 ---
 
 # React
 
-This package is a set of tools for form validation with `react`.
+Data validation for `react`.
 
 ## Conventions
 

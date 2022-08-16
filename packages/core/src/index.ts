@@ -1,4 +1,3 @@
-export * from './array';
-export * from './object';
+export * from './types';
 export * from './validate';
 export * from './isValid';
