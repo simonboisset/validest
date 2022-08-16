@@ -1,4 +1,7 @@
-import { array, object, Schema } from '@ts-v/core';
+import { Schema } from '@ts-v/core';
+import object from '@ts-v/object';
+import array from '@ts-v/array';
+
 import { validateRequest } from './validateRequest';
 
 export const string =

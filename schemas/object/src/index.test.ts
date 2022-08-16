@@ -1,6 +1,6 @@
 import string from '@ts-v/string';
 import number from '@ts-v/number';
-import { object } from '.';
+import object from '.';
 
 test('email returns data object', () => {
   const obj = { name: 'Simon', age: '25', password: 'foo' };

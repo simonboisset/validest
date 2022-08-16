@@ -1,6 +1,6 @@
 import type { Schema, Errors } from '@ts-v/core';
 
-export const array =
+const array =
   <T>(schema: Schema<T>): Schema<T[]> =>
   //@ts-ignore
   (value) => {
@@ -22,3 +22,4 @@ export const array =
     }
     return { data, errors };
   };
+export default array;

@@ -2,7 +2,7 @@ import type { Schema, Errors } from '@ts-v/core';
 
 type ObjectParam<T> = { [K in keyof T]: Schema<T[K]> };
 
-export const object =
+const object =
   <T extends Record<string, any>>(schema: ObjectParam<T>): Schema<T> =>
   //@ts-ignore
   (value) => {
@@ -28,3 +28,5 @@ export const object =
     }
     return { data, errors };
   };
+
+export default object;
