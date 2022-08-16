@@ -10,9 +10,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "publish:major": "turbo run publish:major",
-    "publish:minor": "turbo run publish:minor",
-    "publish:patch": "turbo run publish:patch",
+    "publish:major": "turbo run publish:major --filter=@ts-v/*",
+    "publish:minor": "turbo run publish:minor --filter=@ts-v/*",
+    "publish:patch": "turbo run publish:patch --filter=@ts-v/*",
     "dev:doc": "turbo run dev --filter=documentation",
     "dev": "turbo run dev --parallel",
     "test": "turbo run build --filter=@ts-v/* && jest",
