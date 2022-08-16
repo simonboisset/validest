@@ -1,5 +1,6 @@
 # Typescript validation for react form
 
+See [ts-v documentation](https://ts-v.dev)
 Validation schema for typescript.
 
 ## Concept

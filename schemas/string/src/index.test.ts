@@ -1,5 +1,5 @@
 import string from '.';
-import maybe from '@ts-v/maybe';
+import optional from '@ts-v/optional';
 
 test('string returns false for non-strings', () => {
   expect(string()(undefined).errors).toBe('string');
@@ -16,24 +16,24 @@ test('string returns false for non-strings', () => {
 
 test('string returns true for strings', () => {
   expect(string()('this-is-a-string').data).toBe('this-is-a-string');
-  expect(maybe(string())('this-is-a-string').errors).toBeUndefined();
+  expect(optional(string())('this-is-a-string').errors).toBeUndefined();
   expect(string()('1').data).toBe('1');
 });
 
 test('string returns false for non-strings', () => {
-  expect(maybe(string())(null).errors).toBe('string');
-  expect(maybe(string())(null).data).toBeUndefined();
-  expect(maybe(string())(1).data).toBeUndefined();
-  expect(maybe(string())(NaN).data).toBeUndefined();
-  expect(maybe(string())(true).data).toBeUndefined();
-  expect(maybe(string())({ key: 'this-is-a-key' }).data).toBeUndefined();
-  expect(maybe(string())(['this-is-a-key']).data).toBeUndefined();
-  expect(maybe(string())('').data).toBeUndefined();
+  expect(optional(string())(null).errors).toBe('string');
+  expect(optional(string())(null).data).toBeUndefined();
+  expect(optional(string())(1).data).toBeUndefined();
+  expect(optional(string())(NaN).data).toBeUndefined();
+  expect(optional(string())(true).data).toBeUndefined();
+  expect(optional(string())({ key: 'this-is-a-key' }).data).toBeUndefined();
+  expect(optional(string())(['this-is-a-key']).data).toBeUndefined();
+  expect(optional(string())('').data).toBeUndefined();
 });
 
 test('string returns true for strings', () => {
-  expect(maybe(string())('this-is-a-string').data).toBe('this-is-a-string');
-  expect(maybe(string())('1').data).toBe('1');
-  expect(maybe(string())(undefined).data).toBeUndefined();
-  expect(maybe(string())(undefined).errors).toBeUndefined();
+  expect(optional(string())('this-is-a-string').data).toBe('this-is-a-string');
+  expect(optional(string())('1').data).toBe('1');
+  expect(optional(string())(undefined).data).toBeUndefined();
+  expect(optional(string())(undefined).errors).toBeUndefined();
 });

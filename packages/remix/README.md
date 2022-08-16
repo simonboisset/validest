@@ -1,10 +1,11 @@
 # Typescript validation for remix action
 
+See [ts-v documentation](https://ts-v.dev)
 Validation schema for typescript.
 
 ## Concept
 
-For scheam types and front validation please read the docs of liked packages :
+For schema types and front validation please read the docs of linked packages :
 
 - [core](../core#readme)
 - [react](../react#readme)
@@ -20,7 +21,7 @@ yarn add @ts-v/remix
 ### useTsvAction
 
 ```tsx
-import { useTsvAction }from '@ts-v/remix/react';
+import { useTsvAction }from '@ts-v/remix';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
