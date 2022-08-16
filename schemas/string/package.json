@@ -1,6 +1,6 @@
 {
   "name": "@ts-v/string",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
