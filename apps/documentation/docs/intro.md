@@ -2,46 +2,61 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+ts-v is a data runtime validation tool, written in typescript and for typescript. It is a lightweight alternative to [yup](https://github.com/jquense/yup), [zod](https://zod.dev/) or [superstruct](https://docs.superstructjs.org/).
 
-## Getting Started
+ts-v is written with customization in mind. Of course there is a standard validation scheme, but sometimes you may need specific data validation and you can do that with ts-v.
 
-Get started by **creating a new site**.
+## Installation
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```sh
+yarn add @ts-v/core
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+:::info
+You can install `@ts-v/kit` instead of `@ts-v/core` to use all schemas.
+:::
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Install the schema you need :
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```sh
+yarn add @ts-v/object @ts-v/string @ts-v/int
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Usage
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### Write your schema
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+```ts
+import string from '@ts-v/string';
+import object from '@ts-v/object';
+import int from '@ts-v/int';
+
+const schema = object({
+  name: string('Custom error message'),
+  age: int(),
+});
+```
+
+### Validate your data
+
+```ts
+try {
+  const { name, age } = validate(data,schema)
+
+} catch (error) {
+  error = {
+    name: 'Custom error message'
+    age: 'number',
+  };
+}
+```
+
+### Test your data conditionally
+
+```ts
+if (isValid(data, schema)) {
+  data.name;
+}
+```

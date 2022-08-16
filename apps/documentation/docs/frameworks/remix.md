@@ -1,13 +1,12 @@
-# Typescript validation for remix action
+---
+sidebar_position: 2
+---
 
-Validation schema for typescript.
+# Remix
 
-## Concept
+## Conventions
 
-For schema types and front validation please read the docs of linked packages :
-
-- [core](../core#readme)
-- [react](../react#readme)
+This package uses the same conventions [here](/docs/frameworks/react#conventions)
 
 ## Installation
 
@@ -19,8 +18,10 @@ yarn add @ts-v/remix
 
 ### useTsvAction
 
+It's written on top of `useActionData`.
+
 ```tsx
-import { useTsvAction }from '@ts-v/remix';
+import { useTsvAction }from '@ts-v/remix/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -50,6 +51,8 @@ const Component =()=>{
 ```
 
 ### useTsvFetcher
+
+It's written on top of `useFetcher`.
 
 ```tsx
 import { useTsvFetcher }from '@ts-v/remix/react';

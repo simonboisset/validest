@@ -13,8 +13,7 @@ yarn add @ts-v/core
 Code :
 
 ```ts
-import { array, object, validate } from '@ts-v/core';
-import { number, oneOf, string } from '@ts-v/kit';
+import { validate } from '@ts-v/core';
 
 // Unknown params
 const params = {
@@ -119,7 +118,7 @@ import type { Schema } from '@ts-v/core';
 
 Schema type is a function that take an unkown value and return an object `{ data , error }`. If value is good error must undefined, if it's not data must be undefined.
 
-Exemple for a password :
+Example for a password :
 
 ```ts
 export const password =

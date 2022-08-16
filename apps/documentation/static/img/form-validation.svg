@@ -1,0 +1,14 @@
+<svg width="150" height="200" viewBox="0 0 150 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="2" width="146" height="196" rx="14" stroke="#4A4A4A" stroke-width="4"/>
+<line x1="25" y1="44.5" x2="125" y2="44.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="44.5" x2="125" y2="44.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="72.5" x2="125" y2="72.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="72.5" x2="125" y2="72.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="100.5" x2="125" y2="100.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="100.5" x2="125" y2="100.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="128.5" x2="125" y2="128.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="128.5" x2="125" y2="128.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="159.5" x2="100" y2="159.5" stroke="#4A4A4A" stroke-width="3"/>
+<line x1="25" y1="159.5" x2="100" y2="159.5" stroke="#4A4A4A" stroke-width="3"/>
+<path d="M100 173.429L110.286 183.714L136 158" stroke="#4A4A4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

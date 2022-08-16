@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 
 const config = {
-  title: 'Ts-v',
+  title: 'ts-v',
   tagline: 'typescript schema validation',
   url: 'https://ts-v.dev',
   baseUrl: '/',
@@ -37,13 +37,13 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/simonboisset/ts-v/tree/main/apps/documentation/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/simonboisset/ts-v/tree/main/apps/documentation/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -56,10 +56,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Ts-v',
+        title: 'ts-v',
         logo: {
-          alt: 'Ts-v Logo',
-          src: 'img/logo.png',
+          alt: 'ts-v Logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
@@ -70,7 +70,7 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/simonboisset/ts-v',
             label: 'GitHub',
             position: 'right',
           },
@@ -83,28 +83,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Intro',
                 to: '/docs/intro',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Core',
+                to: '/docs/core-concepts',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'React',
+                to: '/docs/frameworks/react',
               },
             ],
           },
+
           {
             title: 'More',
             items: [
@@ -114,12 +106,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/simonboisset/ts-v',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ts-v`,
       },
       prism: {
         theme: lightCodeTheme,
