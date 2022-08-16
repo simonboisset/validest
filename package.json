@@ -15,8 +15,7 @@
     "publish:patch": "turbo run publish:patch",
     "dev:doc": "turbo run dev --filter=documentation",
     "dev": "turbo run dev --parallel",
-    "test": "turbo run build --filter=@ts-v/core && jest",
-    "test-ci": "turbo run build --filter=@ts-v/core && jest --config=./jest-ci.config.js",
+    "test": "turbo run build --filter=@ts-v/* && jest",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
