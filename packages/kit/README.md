@@ -1,5 +1,6 @@
 # Typescript validation starter kit
 
+See [ts-v documentation](https://ts-v.dev)
 Validation schema for typescript.
 
 ## Quick start

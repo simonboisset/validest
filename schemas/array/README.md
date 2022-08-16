@@ -1,1 +1,3 @@
-# Date schema
+# Array schema
+
+See [ts-v documentation](https://ts-v.dev)
