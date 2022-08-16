@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { useTsvForm } from '@ts-v/react';
 import s from '@ts-v/kit';
-import { object } from '@ts-v/core';
+import object from '@ts-v/object';
+import { useTsvForm } from '@ts-v/react';
+import { useState } from 'react';
+import './App.css';
+import logo from './logo.svg';
 
 function App() {
   const [success, setSuccess] = useState(false);
