@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:doc": "turbo run build --filter=documentation",
     "publish:major": "turbo run publish:major --filter=@ts-v/*",
     "publish:minor": "turbo run publish:minor --filter=@ts-v/*",
     "publish:patch": "turbo run publish:patch --filter=@ts-v/*",
