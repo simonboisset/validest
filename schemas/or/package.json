@@ -1,0 +1,47 @@
+{
+  "name": "@ts-v/or",
+  "version": "0.3.0",
+  "description": "Typed schema validation",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && builder && tsc",
+    "version:major": "yarn version --new-version major --no-git-tag-version",
+    "version:minor": "yarn version --new-version minor --no-git-tag-version",
+    "version:patch": "yarn version --new-version patch --no-git-tag-version",
+    "publish:major": "yarn publish --access public",
+    "publish:minor": "yarn publish --access public",
+    "publish:patch": "yarn publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonboisset/ts-v",
+    "directory": "schemas/or"
+  },
+  "bugs": {
+    "url": "https://github.com/simonboisset/ts-v/issues"
+  },
+  "homepage": "https://github.com/simonboisset/ts-v",
+  "author": "Simon Boisset <simonboisset.dev@gmail.com>",
+  "license": "MIT",
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "@ts-v/core": "*",
+    "builder": "*",
+    "esbuild": "^0.14.42",
+    "esbuild-node-externals": "^1.4.1",
+    "typescript": "^4.7.4"
+  },
+  "keywords": [
+    "typescript",
+    "validation",
+    "schema"
+  ]
+}
