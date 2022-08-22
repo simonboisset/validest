@@ -1,5 +1,5 @@
 {
-  "name": "@ts-v/kit",
+  "name": "@ts-v/and",
   "version": "0.3.1",
   "description": "Typed schema validation",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/simonboisset/ts-v",
-    "directory": "packages/kit"
+    "directory": "schemas/and"
   },
   "bugs": {
     "url": "https://github.com/simonboisset/ts-v/issues"
@@ -32,21 +32,8 @@
     "tabWidth": 2,
     "printWidth": 120
   },
-  "dependencies": {
-    "@ts-v/array": "*",
-    "@ts-v/core": "*",
-    "@ts-v/date": "*",
-    "@ts-v/int": "*",
-    "@ts-v/nullable": "*",
-    "@ts-v/number": "*",
-    "@ts-v/object": "*",
-    "@ts-v/and": "*",
-    "@ts-v/or": "*",
-    "@ts-v/one-of": "*",
-    "@ts-v/optional": "*",
-    "@ts-v/string": "*"
-  },
   "devDependencies": {
+    "@ts-v/core": "*",
     "builder": "*",
     "esbuild": "^0.14.42",
     "esbuild-node-externals": "^1.4.1",

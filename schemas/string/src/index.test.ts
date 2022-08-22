@@ -2,7 +2,7 @@ import string from '.';
 import optional from '@ts-v/optional';
 
 test('string returns false for non-strings', () => {
-  expect(string()(undefined).errors).toBe('string');
+  expect(string()(undefined).error).toBe('string');
   expect(string()(undefined).data).toBeUndefined();
   expect(string()(null).data).toBeUndefined();
   expect(string()(1).data).toBeUndefined();
@@ -11,17 +11,17 @@ test('string returns false for non-strings', () => {
   expect(string()({ key: 'this-is-a-key' }).data).toBeUndefined();
   expect(string()(['this-is-a-key']).data).toBeUndefined();
   expect(string()('').data).toBeUndefined();
-  expect(string('an-other-error')(undefined).errors).toBe('an-other-error');
+  expect(string('an-other-error')(undefined).error).toBe('an-other-error');
 });
 
 test('string returns true for strings', () => {
   expect(string()('this-is-a-string').data).toBe('this-is-a-string');
-  expect(optional(string())('this-is-a-string').errors).toBeUndefined();
+  expect(optional(string())('this-is-a-string').error).toBeUndefined();
   expect(string()('1').data).toBe('1');
 });
 
 test('string returns false for non-strings', () => {
-  expect(optional(string())(null).errors).toBe('string');
+  expect(optional(string())(null).error).toBe('string');
   expect(optional(string())(null).data).toBeUndefined();
   expect(optional(string())(1).data).toBeUndefined();
   expect(optional(string())(NaN).data).toBeUndefined();
@@ -35,5 +35,5 @@ test('string returns true for strings', () => {
   expect(optional(string())('this-is-a-string').data).toBe('this-is-a-string');
   expect(optional(string())('1').data).toBe('1');
   expect(optional(string())(undefined).data).toBeUndefined();
-  expect(optional(string())(undefined).errors).toBeUndefined();
+  expect(optional(string())(undefined).error).toBeUndefined();
 });

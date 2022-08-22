@@ -5,20 +5,20 @@ import { getFormData } from '../data/getFormData';
 
 export const useTsvAction = <T>(schema: Schema<T>) => {
   const actionData = useActionData();
-  const [errors, setErrors] = useState<Errors<T>>();
+  const [error, setErrors] = useState<Errors<T>>();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    const { errors } = schema(getFormData(e.target));
-    if (errors) {
+    const { error } = schema(getFormData(e.target));
+    if (error) {
       e.preventDefault();
-      setErrors(errors);
+      setErrors(error);
     } else {
       setErrors(undefined);
     }
   };
   const onChange = (e: React.FormEvent<HTMLFormElement>) => {
-    const { errors } = schema(getFormData(e.target));
-    if (errors) {
-      setErrors(errors);
+    const { error } = schema(getFormData(e.target));
+    if (error) {
+      setErrors(error);
     } else {
       setErrors(undefined);
     }
@@ -26,7 +26,7 @@ export const useTsvAction = <T>(schema: Schema<T>) => {
   return {
     onSubmit,
     onChange,
-    errors: errors || (actionData?.errors as Errors<T> | undefined),
+    error: error || (actionData?.error as Errors<T> | undefined),
     data: actionData,
   };
 };

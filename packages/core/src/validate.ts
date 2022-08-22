@@ -1,9 +1,9 @@
 import type { Schema } from './types';
 
 export const validate = <T>(params: unknown, schema: Schema<T>) => {
-  const { errors, data } = schema(params);
-  if (errors) {
-    throw errors;
+  const { error, data } = schema(params);
+  if (error) {
+    throw error;
   }
   return data as T;
 };

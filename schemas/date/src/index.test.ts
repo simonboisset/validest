@@ -2,8 +2,8 @@ import date from '.';
 import optional from '@ts-v/optional';
 
 test('string returns false for non-date', () => {
-  expect(date()(undefined).errors).toBe('date');
-  expect(date('date-error')(undefined).errors).toBe('date-error');
+  expect(date()(undefined).error).toBe('date');
+  expect(date('date-error')(undefined).error).toBe('date-error');
   expect(date()(undefined).data).toBeUndefined();
   expect(date()(null).data).toBeUndefined();
   expect(date()(NaN).data).toBeUndefined();
@@ -21,6 +21,6 @@ test('date returns true for date', () => {
   expect(date()(dateValue.toISOString()).data?.valueOf()).toBe(dateValue.valueOf());
   expect(date()(dateValue.valueOf()).data?.valueOf()).toBe(dateValue.valueOf());
   expect(date()('2022-01-12').data?.valueOf()).toBe(dateValue.valueOf());
-  expect(optional(date())(undefined).errors).toBeUndefined();
+  expect(optional(date())(undefined).error).toBeUndefined();
   expect(optional(date())(undefined).data).toBeUndefined();
 });

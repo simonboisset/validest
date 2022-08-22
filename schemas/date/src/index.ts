@@ -12,9 +12,9 @@ const date =
       } else if (value instanceof Date && !isNaN(value.valueOf())) {
         return { data: value };
       }
-      return { errors: error || 'date' };
+      return { error: error || 'date' };
     } catch (err) {
-      return { errors: error || 'date' };
+      return { error: error || 'date' };
     }
   };
 

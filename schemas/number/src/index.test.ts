@@ -1,10 +1,10 @@
 import number from '.';
 import optional from '@ts-v/optional';
 
-test('number returns errors for non-numbers', () => {
+test('number returns error for non-numbers', () => {
   expect(number()(undefined).data).toBeUndefined();
-  expect(number()(undefined).errors).toBe('number');
-  expect(number('an-other-error')(undefined).errors).toBe('an-other-error');
+  expect(number()(undefined).error).toBe('number');
+  expect(number('an-other-error')(undefined).error).toBe('an-other-error');
   expect(number()(null).data).toBeUndefined();
   expect(number()(NaN).data).toBeUndefined();
   expect(number()(true).data).toBeUndefined();
@@ -25,7 +25,7 @@ test('number returns data for numbers', () => {
 });
 
 test('optional number returns error for non-numbers', () => {
-  expect(optional(number())(null).errors).toBe('number');
+  expect(optional(number())(null).error).toBe('number');
   expect(optional(number())(null).data).toBeUndefined();
   expect(optional(number())(NaN).data).toBeUndefined();
   expect(optional(number())(true).data).toBeUndefined();
@@ -44,5 +44,5 @@ test('optional number returns data for numbers', () => {
   expect(optional(number())('-0.1').data).toBe(-0.1);
   expect(optional(number())('-0,1').data).toBe(-0.1);
   expect(optional(number())(undefined).data).toBeUndefined();
-  expect(optional(number())(undefined).errors).toBeUndefined();
+  expect(optional(number())(undefined).error).toBeUndefined();
 });

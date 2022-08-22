@@ -4,7 +4,7 @@ const nullable =
   <T>(schema: Schema<T>): Schema<T | null> =>
   (value: unknown) => {
     if (value === null) {
-      return { data: null, errors: undefined };
+      return { data: null, error: undefined };
     }
     return schema(value);
   };

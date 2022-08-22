@@ -123,7 +123,7 @@ test('shoud get form data with deep flat array', () => {
   expect(result[1].name).toBe('Item 2');
   expect(result[1].id).toBe(2);
 });
-test('shoud throw errors for an array', async () => {
+test('shoud throw error for an array', async () => {
   const params = [
     { name: 'Item 1', id: 'a' },
     { name: 'Item 2', id: 2 },
@@ -136,7 +136,7 @@ test('shoud throw errors for an array', async () => {
     [undefined, { id: 'id-error' }, undefined, undefined, undefined]
   );
 });
-test('shoud throw errors for an object', async () => {
+test('shoud throw error for an object', async () => {
   const params = {
     name: 'joe',
     profile: {

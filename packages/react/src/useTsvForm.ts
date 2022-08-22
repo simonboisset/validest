@@ -6,12 +6,12 @@ export const useTsvForm = <T>(
   schema: Schema<T>,
   afterValidate?: (data: T, e: React.FormEvent<HTMLFormElement>) => void
 ) => {
-  const [errors, setErrors] = useState<Errors<T>>();
+  const [error, setErrors] = useState<Errors<T>>();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { data, errors } = schema(getFormData(e.target));
-    if (errors) {
-      setErrors(errors);
+    const { data, error } = schema(getFormData(e.target));
+    if (error) {
+      setErrors(error);
     } else {
       setErrors(undefined);
       if (!!afterValidate) {
@@ -20,12 +20,12 @@ export const useTsvForm = <T>(
     }
   };
   const onChange = (e: React.FormEvent<HTMLFormElement>) => {
-    const { errors } = schema(getFormData(e.target));
-    if (errors) {
-      setErrors(errors);
+    const { error } = schema(getFormData(e.target));
+    if (error) {
+      setErrors(error);
     } else {
       setErrors(undefined);
     }
   };
-  return { onSubmit, onChange, errors };
+  return { onSubmit, onChange, error };
 };

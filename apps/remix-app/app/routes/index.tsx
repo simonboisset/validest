@@ -6,7 +6,7 @@ import { schema } from '~/schema';
 export const action = actionValidation;
 
 export default function Index() {
-  const { onSubmit, errors, data } = useTsvAction(schema);
+  const { onSubmit, error, data } = useTsvAction(schema);
   console.log(data);
 
   return (
@@ -15,11 +15,11 @@ export default function Index() {
       <Form onSubmit={onSubmit} method='post'>
         <div>
           <input name='name' placeholder='name' />
-          <div style={{ fontSize: 12, color: 'red' }}>{errors?.name || null}</div>
+          <div style={{ fontSize: 12, color: 'red' }}>{error?.name || null}</div>
         </div>
         <div>
           <input name='age' placeholder='age' />
-          <div style={{ fontSize: 12, color: 'red' }}>{errors?.age || null}</div>
+          <div style={{ fontSize: 12, color: 'red' }}>{error?.age || null}</div>
         </div>
         <button type='submit'>Submit</button>
       </Form>

@@ -4,7 +4,7 @@ const optional =
   <T>(schema: Schema<T>): Schema<T | undefined> =>
   (value: unknown) => {
     if (value === undefined) {
-      return { data: undefined, errors: undefined };
+      return { data: undefined, error: undefined };
     }
     return schema(value);
   };
