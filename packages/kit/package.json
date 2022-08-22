@@ -1,6 +1,6 @@
 {
   "name": "@ts-v/kit",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -33,6 +33,7 @@
     "printWidth": 120
   },
   "dependencies": {
+    "@ts-v/and": "*",
     "@ts-v/array": "*",
     "@ts-v/core": "*",
     "@ts-v/date": "*",
@@ -40,10 +41,9 @@
     "@ts-v/nullable": "*",
     "@ts-v/number": "*",
     "@ts-v/object": "*",
-    "@ts-v/and": "*",
-    "@ts-v/or": "*",
     "@ts-v/one-of": "*",
     "@ts-v/optional": "*",
+    "@ts-v/or": "*",
     "@ts-v/string": "*"
   },
   "devDependencies": {
