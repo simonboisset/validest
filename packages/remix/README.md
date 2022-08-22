@@ -31,19 +31,19 @@ const schema = object({
 
 const Component =()=>{
   // To valide form on each changes you can use onChange methode
-  const { errors, onChange } = useTsvAction(schema)
+  const { error, onChange } = useTsvAction(schema)
   return (
     <Form onChange={onChange}>
       <input name='name-lastname'/>
-      {errors?.name?.lastname && <div>{errors.name.lastname}<div>}
+      {error?.name?.lastname && <div>{error.name.lastname}<div>}
       <input name='name-firstname'/>
       <input name='age'/>
-      {errors?.age && <div>{errors.age}<div>}
+      {error?.age && <div>{error.age}<div>}
       <input name='contacts-0-userId'/>
       <input name='contacts-0-text'/>
       <input name='contacts-1-userId'/>
       <input name='contacts-1-text'/>
-      {errors?.contacts?.[1]?.text && <div>{errors.contacts.[1].text}<div>}
+      {error?.contacts?.[1]?.text && <div>{error.contacts.[1].text}<div>}
       <button type='submit'>Submit</button>
     </Form>
   )
@@ -62,21 +62,21 @@ const schema = object({
 })
 
 const Component =()=>{
-  const { errors, onSubmit,Form } = useTsvFetcher(schema,(data,e) =>{
+  const { error, onSubmit,Form } = useTsvFetcher(schema,(data,e) =>{
   // make that you want after validation
 })
 return (
   <Form action='api/request' onSubmit={onSubmit}>
     <input name='name-lastname'/>
-    {errors?.name?.lastname && <div>{errors.name.lastname}<div>}
+    {error?.name?.lastname && <div>{error.name.lastname}<div>}
     <input name='name-firstname'/>
     <input name='age'/>
-    {errors?.age && <div>{errors.age}<div>}
+    {error?.age && <div>{error.age}<div>}
     <input name='contacts-0-userId'/>
     <input name='contacts-0-text'/>
     <input name='contacts-1-userId'/>
     <input name='contacts-1-text'/>
-    {errors?.contacts?.[1]?.text && <div>{errors.contacts.[1].text}<div>}
+    {error?.contacts?.[1]?.text && <div>{error.contacts.[1].text}<div>}
     <button type='submit'>Submit</button>
   </Form>
 )}

@@ -7,7 +7,7 @@ import logo from './logo.svg';
 
 function App() {
   const [success, setSuccess] = useState(false);
-  const { errors, onSubmit } = useTsvForm(
+  const { error, onSubmit } = useTsvForm(
     object({
       name: s.string('Please enter your name'),
       age: s.number('Please enter your age'),
@@ -21,11 +21,11 @@ function App() {
         <form onSubmit={onSubmit}>
           <div>
             <input name='name' placeholder='name' />
-            <div style={{ fontSize: 12, color: 'red' }}>{errors?.name || null}</div>
+            <div style={{ fontSize: 12, color: 'red' }}>{error?.name || null}</div>
           </div>
           <div>
             <input name='age' placeholder='age' />
-            <div style={{ fontSize: 12, color: 'red' }}>{errors?.age || null}</div>
+            <div style={{ fontSize: 12, color: 'red' }}>{error?.age || null}</div>
           </div>
           <button type='submit'>Submit</button>
         </form>

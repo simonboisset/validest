@@ -43,7 +43,7 @@ const { name, profile } = validate(
 
 The returned value of validate function will be typed.
 
-## Validation errors
+## Validation error
 
 If params don't pass validation it will throw error as a similar object with keys params and string error values.
 
@@ -125,7 +125,7 @@ Example for a password :
 export const password =
   (error?: string): Schema<string> =>
   (value) => {
-    return typeof value === 'string' && value.length > 8 ? { data: value } : { errors: error || 'password' };
+    return typeof value === 'string' && value.length > 8 ? { data: value } : { error: error || 'password' };
   };
 ```
 

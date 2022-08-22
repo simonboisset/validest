@@ -28,7 +28,7 @@ test('object union', () => {
     name: 'a name',
   });
   expect(schema({ age: 21, name: 'a name' }).data).toEqual({ age: 21, name: 'a name' });
-  expect(schema({ age: 21, firstname: 'a firstname' }).errors).toEqual({
+  expect(schema({ age: 21, firstname: 'a firstname' }).error).toEqual({
     lastname: 'string',
   });
   expect(schema({ age: 21, firstname: 'a firstname' }).data).toEqual({

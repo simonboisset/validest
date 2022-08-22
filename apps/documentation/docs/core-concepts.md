@@ -80,7 +80,7 @@ Example for a password :
 export const password =
   (error?: string): Schema<string> =>
   (value) => {
-    return typeof value === 'string' && value.length > 8 ? { data: value } : { errors: error || 'password' };
+    return typeof value === 'string' && value.length > 8 ? { data: value } : { error: error || 'password' };
   };
 ```
 

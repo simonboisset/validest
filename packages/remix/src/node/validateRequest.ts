@@ -4,9 +4,9 @@ import { getRequestData } from '../data/getRequestData';
 
 export const validateRequest = async <T>(request: Request, schema: Schema<T>): Promise<T> => {
   const formData = await getRequestData(request);
-  const { data, errors } = schema(formData);
-  if (errors) {
-    throw json({ errors }, { status: 400 });
+  const { data, error } = schema(formData);
+  if (error) {
+    throw json({ error }, { status: 400 });
   }
   return data as T;
 };

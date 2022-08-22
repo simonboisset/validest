@@ -7,7 +7,7 @@ const int =
     const n = parseNumber(value);
 
     if (n === undefined || n < 0 || n !== parseInt(n.toString())) {
-      return { errors: error || 'integer' };
+      return { error: error || 'integer' };
     }
     return { data: n };
   };

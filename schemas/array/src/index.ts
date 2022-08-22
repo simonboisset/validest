@@ -5,21 +5,21 @@ const array =
   //@ts-ignore
   (value) => {
     if (!Array.isArray(value)) {
-      return { errors: 'array' };
+      return { error: 'array' };
     }
     const data: T[] = [];
-    let errors: Errors<T[]> | undefined = [];
+    let error: Errors<T[]> | undefined = [];
 
     for (const item of value) {
       const validatedItem = schema(item);
       //@ts-ignore
-      errors.push(validatedItem.errors);
+      error.push(validatedItem.error);
       //@ts-ignore
       data.push(validatedItem.data);
     }
-    if (errors.every((e) => !e)) {
-      errors = undefined;
+    if (error.every((e) => !e)) {
+      error = undefined;
     }
-    return { data, errors };
+    return { data, error };
   };
 export default array;
