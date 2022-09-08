@@ -1,4 +1,4 @@
-import { Errors, Schema } from '@ts-v/core';
+import type { TsvError, Schema } from '@ts-v/core';
 import { useState } from 'react';
 import { getFormData } from './getFormData';
 
@@ -6,14 +6,14 @@ export const useTsvForm = <T>(
   schema: Schema<T>,
   afterValidate?: (data: T, e: React.FormEvent<HTMLFormElement>) => void
 ) => {
-  const [error, setErrors] = useState<Errors<T>>();
+  const [error, setError] = useState<TsvError<T>>();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { data, error } = schema(getFormData(e.target));
     if (error) {
-      setErrors(error);
+      setError(error);
     } else {
-      setErrors(undefined);
+      setError(undefined);
       if (!!afterValidate) {
         afterValidate(data as T, e);
       }
@@ -22,9 +22,9 @@ export const useTsvForm = <T>(
   const onChange = (e: React.FormEvent<HTMLFormElement>) => {
     const { error } = schema(getFormData(e.target));
     if (error) {
-      setErrors(error);
+      setError(error);
     } else {
-      setErrors(undefined);
+      setError(undefined);
     }
   };
   return { onSubmit, onChange, error };

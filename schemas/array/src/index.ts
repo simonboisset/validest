@@ -1,4 +1,4 @@
-import type { Schema, Errors } from '@ts-v/core';
+import type { Schema, TsvError } from '@ts-v/core';
 
 const array =
   <T>(schema: Schema<T>): Schema<T[]> =>
@@ -8,7 +8,7 @@ const array =
       return { error: 'array' };
     }
     const data: T[] = [];
-    let error: Errors<T[]> | undefined = [];
+    let error: TsvError<T[]> | undefined = [];
 
     for (const item of value) {
       const validatedItem = schema(item);

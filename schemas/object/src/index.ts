@@ -1,4 +1,4 @@
-import type { Schema, Errors } from '@ts-v/core';
+import type { Schema, TsvError } from '@ts-v/core';
 
 type ObjectParam<T> = { [K in keyof T]: Schema<T[K]> };
 
@@ -7,7 +7,7 @@ const object =
   //@ts-ignore
   (value) => {
     let data = {} as T;
-    let error = {} as Errors<T> | undefined;
+    let error = {} as TsvError<T> | undefined;
     if (error) {
       for (const key in schema) {
         if (Object.prototype.hasOwnProperty.call(schema, key)) {
