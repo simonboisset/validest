@@ -1,11 +1,8 @@
 import { mapFormData } from './mapFormData';
 import { mapObjectToArrayIfKeysAreNumbers } from './mapObjectToArrayIfKeysAreNumbers';
 
-export type Data<T> = {
-  [P in keyof T]?: T[P] extends string[] ? string[] : T[P] extends Record<string, any> ? Data<T[P]> : string;
-};
-export const getFormData = (target: React.BaseSyntheticEvent<any>['target']) => {
-  const data = new FormData(target);
+export const getFormData = (target: EventTarget) => {
+  const data = new FormData(target as HTMLFormElement);
   const keys = data.keys();
   let entries: Record<string, any> = {};
   let key = keys.next();

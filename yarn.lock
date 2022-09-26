@@ -3043,6 +3043,11 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
+"@ts-v/remix@*":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@ts-v/remix/-/remix-0.4.1.tgz#05d46467ea1366a00c44e01fcaf69fe9177c44da"
+  integrity sha512-t8+30VhJaa/oTefn8jI+YFpqdv17dXQnPZ5Oqu/mM3jw3GCktGoojEsu96gC8JN0Oh+8h71LLvtvs5XzfdKfnQ==
+
 "@tsconfig/docusaurus@^1.0.5":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@tsconfig/docusaurus/-/docusaurus-1.0.6.tgz#7305a7fa590decc0d5968500234e95fd68788978"

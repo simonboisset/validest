@@ -1,4 +1,4 @@
-import { Data } from './getRequestData';
+import type { Data } from './mapFormData';
 import { parseNumber } from './mapFormData';
 
 export const mapObjectToArrayIfKeysAreNumbers = <T>(data: Data<T>) => {

@@ -1,5 +1,5 @@
 {
-  "name": "@ts-v/react",
+  "name": "@ts-v/form",
   "version": "0.4.1",
   "description": "Typed schema validation",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/simonboisset/ts-v",
-    "directory": "packages/react"
+    "directory": "packages/form"
   },
   "bugs": {
     "url": "https://github.com/simonboisset/ts-v/issues"
@@ -39,15 +39,7 @@
     "builder": "*",
     "esbuild": "^0.14.42",
     "esbuild-node-externals": "^1.4.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
     "typescript": "^4.7.4"
-  },
-  "peerDependencies": {
-    "react": ">=16"
-  },
-  "dependencies": {
-    "@ts-v/form": "*"
   },
   "keywords": [
     "typescript",

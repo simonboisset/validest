@@ -1,6 +1,6 @@
 import type { TsvError, Schema } from '@ts-v/core';
 import { useState } from 'react';
-import { getFormData } from './getFormData';
+import { getFormData } from '@ts-v/form';
 
 export const useTsvForm = <T>(
   schema: Schema<T>,

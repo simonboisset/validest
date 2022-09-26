@@ -1,7 +1,7 @@
 {
-  "name": "@ts-v/react",
+  "name": "@ts-v/remix-node",
   "version": "0.4.1",
-  "description": "Typed schema validation",
+  "description": "Typed schema validation for remix stack",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/simonboisset/ts-v",
-    "directory": "packages/react"
+    "directory": "packages/remix-node"
   },
   "bugs": {
     "url": "https://github.com/simonboisset/ts-v/issues"
@@ -33,6 +33,8 @@
     "printWidth": 120
   },
   "devDependencies": {
+    "@remix-run/node": "^1.5.1",
+    "@remix-run/react": "^1.5.1",
     "@ts-v/core": "*",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
@@ -43,19 +45,23 @@
     "react-dom": "^18.1.0",
     "typescript": "^4.7.4"
   },
-  "peerDependencies": {
-    "react": ">=16"
-  },
   "dependencies": {
     "@ts-v/form": "*"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^1.5.1",
+    "@remix-run/react": "^1.5.1",
+    "react": ">=16"
   },
   "keywords": [
     "typescript",
     "react",
+    "remix",
     "form",
     "validation",
     "schema",
     "form-validation",
-    "react-form-validation"
+    "remix-form",
+    "remix-form-validation"
   ]
 }
