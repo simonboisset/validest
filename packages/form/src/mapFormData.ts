@@ -1,4 +1,6 @@
-import { Data } from './getRequestData';
+export type Data<T> = {
+  [P in keyof T]?: T[P] extends string[] ? string[] : T[P] extends Record<string, any> ? Data<T[P]> : string;
+};
 
 export const parseNumber = (value: unknown) => {
   const n = typeof value === 'string' ? (!value ? undefined : Number(value.replace(',', '.'))) : value;

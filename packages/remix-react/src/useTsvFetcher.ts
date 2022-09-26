@@ -1,17 +1,10 @@
-import { useActionData } from '@remix-run/react';
+import { useFetcher } from '@remix-run/react';
 import type { TsvError, Schema } from '@ts-v/core';
 import { useState } from 'react';
-import { getFormData } from '../data/getFormData';
+import { getFormData } from '@ts-v/form';
 
-type ReturnTsvAction<R, T> = {
-  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  onChange: (e: React.FormEvent<HTMLFormElement>) => void;
-  error: TsvError<T> | undefined;
-  data: R;
-};
-
-export const useTsvAction = <R, T>(schema: Schema<T>): ReturnTsvAction<R, T> => {
-  const actionData = useActionData();
+export const useTsvFetcher = <R, T>(schema: Schema<T>) => {
+  const { data: fetcherData, ...fetcher } = useFetcher<{ error?: TsvError<T>; data?: R }>();
   const [error, setErrors] = useState<TsvError<T>>();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const { error } = schema(getFormData(e.target));
@@ -33,7 +26,8 @@ export const useTsvAction = <R, T>(schema: Schema<T>): ReturnTsvAction<R, T> => 
   return {
     onSubmit,
     onChange,
-    error: error || (actionData?.error as TsvError<T> | undefined),
-    data: actionData,
+    error: error || (fetcherData?.error as TsvError<T> | undefined),
+    data: fetcherData,
+    ...fetcher,
   };
 };

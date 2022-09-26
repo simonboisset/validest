@@ -1,5 +1,5 @@
 {
-  "name": "@ts-v/remix",
+  "name": "@ts-v/remix-react",
   "version": "0.4.1",
   "description": "Typed schema validation for remix stack",
   "main": "dist/index.js",
@@ -49,6 +49,9 @@
     "@remix-run/node": "^1.5.1",
     "@remix-run/react": "^1.5.1",
     "react": ">=16"
+  },
+  "dependencies": {
+    "@ts-v/form": "*"
   },
   "keywords": [
     "typescript",
