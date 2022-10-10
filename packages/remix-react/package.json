@@ -1,6 +1,6 @@
 {
   "name": "@ts-v/remix-react",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Typed schema validation for remix stack",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

@@ -1,6 +1,6 @@
 {
   "name": "ts-v",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -22,9 +22,9 @@
   },
   "devDependencies": {
     "@ts-v/kit": "*",
-    "vitest": "^0.24.0",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "vitest": "^0.24.0"
   },
   "engines": {
     "npm": ">=7.0.0",
