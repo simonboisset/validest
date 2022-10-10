@@ -1,4 +1,5 @@
 import and from '@ts-v/and';
+import any from '@ts-v/any';
 import array from '@ts-v/array';
 import date from '@ts-v/date';
 import int from '@ts-v/int';
@@ -11,4 +12,4 @@ import optional from '@ts-v/optional';
 import or from '@ts-v/or';
 import string from '@ts-v/string';
 export * from '@ts-v/core';
-export { array, and, date, int, json, optional, nullable, number, string, object, or, oneOf };
+export { array, and, any, date, int, json, optional, nullable, number, string, object, or, oneOf };
