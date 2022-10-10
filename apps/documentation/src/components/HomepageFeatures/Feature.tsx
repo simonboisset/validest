@@ -9,10 +9,10 @@ type FeatureItem = {
 const Feature = ({ title, Svg, description }: FeatureItem) => {
   return (
     <div className={clsx('col col--4')}>
-      <div className='text--center'>
-        <Svg style={{ height: 200, width: 200 }} role='img' />
+      <div className="text--center">
+        <Svg style={{ height: 200, width: 200 }} role="img" />
       </div>
-      <div className='text--center padding-horiz--md'>
+      <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

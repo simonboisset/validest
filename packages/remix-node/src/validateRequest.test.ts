@@ -1,8 +1,5 @@
-import array from '@ts-v/array';
-import object from '@ts-v/object';
-import string from '@ts-v/string';
-import number from '@ts-v/number';
-
+import { array, number, object, string } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 import { validateRequest } from './validateRequest';
 
 test('shoud validate form data', async () => {

@@ -12,16 +12,16 @@ export default function Index() {
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
       <h1>Welcome to Remix</h1>
-      <Form onSubmit={onSubmit} method='post'>
+      <Form onSubmit={onSubmit} method="post">
         <div>
-          <input name='name' placeholder='name' />
+          <input name="name" placeholder="name" />
           <div style={{ fontSize: 12, color: 'red' }}>{error?.name || null}</div>
         </div>
         <div>
-          <input name='age' placeholder='age' />
+          <input name="age" placeholder="age" />
           <div style={{ fontSize: 12, color: 'red' }}>{error?.age || null}</div>
         </div>
-        <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </Form>
       {data && (
         <div style={{ color: 'green' }}>

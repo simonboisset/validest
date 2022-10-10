@@ -1,5 +1,5 @@
-import string from '.';
-import optional from '@ts-v/optional';
+import { optional, string } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('string returns false for non-strings', () => {
   expect(string()(undefined).error).toBe('string');

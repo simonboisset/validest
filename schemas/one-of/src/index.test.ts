@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import oneOf from '.';
 
 test('one of test', () => {

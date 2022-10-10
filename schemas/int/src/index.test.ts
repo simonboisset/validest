@@ -1,4 +1,5 @@
-import int from '.';
+import { int } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('number returns error for non integer', () => {
   expect(int()(undefined).data).toBeUndefined();

@@ -42,7 +42,7 @@ try {
         role: string(),
         age: number(),
       }),
-    }),
+    })
   );
 
   profile.age = 25;
