@@ -22,9 +22,6 @@
     "publish:patch": {
       "dependsOn": ["version:patch", "build"]
     },
-    "lint": {
-      "outputs": []
-    },
     "dev": {
       "cache": false
     }

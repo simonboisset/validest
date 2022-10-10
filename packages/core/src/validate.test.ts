@@ -1,12 +1,5 @@
-import array from '@ts-v/array';
-import date from '@ts-v/date';
-import int from '@ts-v/int';
-import number from '@ts-v/number';
-import oneOf from '@ts-v/one-of';
-import string from '@ts-v/string';
-import object from '@ts-v/object';
-
-import { validate } from './validate';
+import { array, date, int, number, object, oneOf, string, validate } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('shoud validate form data', () => {
   const params = {

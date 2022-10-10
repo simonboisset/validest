@@ -5,7 +5,7 @@ import HomepageHeader from '../components/HomepageHeader';
 
 export default function Home(): JSX.Element {
   return (
-    <Layout title={`Typescript schema validation`} description='Description will go into a meta tag in <head />'>
+    <Layout title={`Typescript schema validation`} description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main style={{ width: '100%' }}>
         <HomepageFeatures />

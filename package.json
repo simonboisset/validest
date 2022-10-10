@@ -17,15 +17,12 @@
     "publish:patch": "turbo run publish:patch --filter=@ts-v/*",
     "dev:doc": "turbo run dev --filter=documentation",
     "dev": "turbo run dev --parallel",
-    "test": "turbo run build --filter=@ts-v/* && jest",
-    "lint": "turbo run lint",
+    "test": "yarn build:lib && vitest run",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@swc/core": "^1.2.197",
-    "@swc/jest": "^0.2.21",
-    "@types/jest": "^28.1.1",
-    "jest": "^28.1.0",
+    "@ts-v/kit": "*",
+    "vitest": "^0.24.0",
     "prettier": "latest",
     "turbo": "latest"
   },
@@ -33,6 +30,10 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {},
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  },
   "packageManager": "yarn@1.22.5"
 }

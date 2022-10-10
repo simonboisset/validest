@@ -27,17 +27,13 @@
   "homepage": "https://github.com/simonboisset/ts-v",
   "author": "Simon Boisset <simonboisset.dev@gmail.com>",
   "license": "MIT",
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 2,
-    "printWidth": 120
-  },
   "dependencies": {
     "@ts-v/and": "*",
     "@ts-v/array": "*",
     "@ts-v/core": "*",
     "@ts-v/date": "*",
     "@ts-v/int": "*",
+    "@ts-v/json": "*",
     "@ts-v/nullable": "*",
     "@ts-v/number": "*",
     "@ts-v/object": "*",

@@ -1,7 +1,5 @@
-import and from '.';
-import string from '@ts-v/string';
-import int from '@ts-v/int';
-import object from '@ts-v/object';
+import { and, int, object, string } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('number and int', () => {
   const schema = and([int(), string()]);

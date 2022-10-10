@@ -1,5 +1,5 @@
-import number from '.';
-import optional from '@ts-v/optional';
+import { number, optional } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('number returns error for non-numbers', () => {
   expect(number()(undefined).data).toBeUndefined();

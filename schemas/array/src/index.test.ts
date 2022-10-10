@@ -1,5 +1,5 @@
-import array from '.';
-import string from '@ts-v/string';
+import { array, string } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('shoud return array error', () => {
   const params = {

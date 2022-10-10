@@ -27,11 +27,6 @@
   "homepage": "https://github.com/simonboisset/ts-v",
   "author": "Simon Boisset <simonboisset.dev@gmail.com>",
   "license": "MIT",
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 2,
-    "printWidth": 120
-  },
   "dependencies": {
     "@ts-v/parse-number": "*"
   },

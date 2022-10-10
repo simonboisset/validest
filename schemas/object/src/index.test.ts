@@ -1,6 +1,5 @@
-import string from '@ts-v/string';
-import number from '@ts-v/number';
-import object from '.';
+import { number, object, string } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('email returns data object', () => {
   const obj = { name: 'Simon', age: '25', password: 'foo' };

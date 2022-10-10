@@ -1,5 +1,5 @@
-import date from '.';
-import optional from '@ts-v/optional';
+import { date, optional } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 
 test('string returns false for non-date', () => {
   expect(date()(undefined).error).toBe('date');

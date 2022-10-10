@@ -1,7 +1,6 @@
+import { int, object, string } from '@ts-v/kit';
+import { expect, test } from 'vitest';
 import or from '.';
-import string from '@ts-v/string';
-import int from '@ts-v/int';
-import object from '@ts-v/object';
 
 test('number or int', () => {
   const schema = or([string(), int()]);

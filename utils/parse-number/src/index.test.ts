@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import parseNumber from '.';
 
 test('parseNumber returns undefined for non number', () => {
