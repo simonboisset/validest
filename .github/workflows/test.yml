@@ -8,21 +8,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
+      - name: 🔌 Checkout
+        uses: actions/checkout@v3
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v3
         with:
-          fetch-depth: 100
-      - name: Use Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16'
-          registry-url: https://registry.npmjs.org/
-      - name: Restore Turbo
+          node-version: 16.x
+          cache: 'yarn'
+      - name: 💾 Restore Turbo
         uses: actions/cache@v3
         with:
           path: node_modules/.cache/turbo
           key: ${{ runner.os }}-turbo
-      - name: Install dependencies
+      - name: ⏳ Yarn install
         run: yarn
-      - name: Tests
+      - name: 🚀 Tests
         run: yarn test
