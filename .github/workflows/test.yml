@@ -7,6 +7,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+      TURBO_REMOTE_ONLY: true
     steps:
       - name: 🔌 Checkout
         uses: actions/checkout@v3
@@ -15,11 +19,6 @@ jobs:
         with:
           node-version: 16.x
           cache: 'yarn'
-      - name: 💾 Restore Turbo
-        uses: actions/cache@v3
-        with:
-          path: node_modules/.cache/turbo
-          key: ${{ runner.os }}-turbo
       - name: ⏳ Yarn install
         run: yarn
       - name: 🚀 Tests
