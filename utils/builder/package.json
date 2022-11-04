@@ -1,15 +1,9 @@
 {
   "name": "builder",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.4.6",
   "bin": "index.js",
   "license": "MIT",
-  "devDependencies": {
-    "esbuild": "^0.14.42",
-    "esbuild-node-externals": "^1.4.1"
-  },
-  "peerDependencies": {
-    "esbuild": "^0.14.42",
-    "esbuild-node-externals": "^1.4.1"
-  }
+  "devDependencies": { "esbuild": "^0.14.42", "esbuild-node-externals": "^1.4.1" },
+  "peerDependencies": { "esbuild": "^0.14.42", "esbuild-node-externals": "^1.4.1" }
 }

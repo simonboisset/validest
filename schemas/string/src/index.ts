@@ -1,4 +1,4 @@
-import { Schema } from '@ts-v/core';
+import { Schema } from '@validest/core';
 
 export const string =
   (error?: string): Schema<string> =>

@@ -1,6 +1,6 @@
 # Typescript validation for remix action
 
-See [ts-v documentation](https://ts-v.dev)
+See [validest documentation](https://validest.dev)
 Validation schema for typescript.
 
 ## Concept
@@ -13,7 +13,7 @@ For schema types and front validation please read the docs of linked packages :
 ## Installation
 
 ```sh
-yarn add @ts-v/remix
+yarn add @validest/remix
 ```
 
 ## Front validation
@@ -21,7 +21,7 @@ yarn add @ts-v/remix
 ### useTsvAction
 
 ```tsx
-import { useTsvAction }from '@ts-v/remix';
+import { useTsvAction }from '@validest/remix';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -53,7 +53,7 @@ const Component =()=>{
 ### useTsvFetcher
 
 ```tsx
-import { useTsvFetcher }from '@ts-v/remix/react';
+import { useTsvFetcher }from '@validest/remix/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -87,7 +87,7 @@ return (
 In ActionFunction you can validate the data of the request with same schema and it will be typed.
 
 ```ts
-import { validateRequest } from '@ts-v/remix/node';
+import { validateRequest } from '@validest/remix/node';
 
 export const action: ActionFunction = ({ request }) => {
   const data = validateRequest(request, schema);

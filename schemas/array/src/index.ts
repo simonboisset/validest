@@ -1,4 +1,4 @@
-import type { Schema, TsvError } from '@ts-v/core';
+import type { Schema, TsvError } from '@validest/core';
 
 const array =
   <T>(schema: Schema<T>): Schema<T[]> =>

@@ -1,4 +1,4 @@
-import { and, int, object, string } from '@ts-v/kit';
+import { and, int, object, string } from 'validest';
 import { expect, test } from 'vitest';
 
 test('number and int', () => {

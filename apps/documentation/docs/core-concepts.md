@@ -5,14 +5,14 @@ tags: [data validation, schema, typescript]
 
 # Core concepts
 
-`@ts-v/core` contains the core concepts of ts-v.
+`@validest/core` contains the core concepts of validest.
 
 It includes a `Schema` type, a `ValidationError` type and 2 functions `validate` and `isValid`.
 
 ## Installation
 
 ```sh
-yarn add @ts-v/core
+yarn add @validest/core
 ```
 
 ## validate
@@ -20,7 +20,7 @@ yarn add @ts-v/core
 The `validate` function take an unknown data and schema then return the data with the ReturnType of the schame or throw a `ValidationError`.
 
 ```ts
-import { validate } from '@ts-v/core';
+import { validate } from '@validest/core';
 
 // Unknown data
 const data = {
@@ -67,7 +67,7 @@ if (isValid(data, schema)) {
 ### Schema
 
 ```ts
-import type { Schema } from '@ts-v/core';
+import type { Schema } from '@validest/core';
 ```
 
 It's useful if you want to write your own schema. The only rule is tu return a Schema type with you desired type in generic type.

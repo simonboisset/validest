@@ -1,18 +1,16 @@
 {
   "name": "remix-app",
-  "version": "0.1.0",
+  "version": "0.4.6",
   "private": true,
-  "scripts": {
-    "dev": "remix dev",
-    "start": "remix-serve build"
-  },
+  "scripts": { "dev": "remix dev", "start": "remix-serve build" },
   "dependencies": {
     "@remix-run/node": "^1.6.0",
     "@remix-run/react": "^1.6.0",
     "@remix-run/serve": "^1.6.0",
-    "@ts-v/core": "*",
-    "@ts-v/kit": "*",
-    "@ts-v/remix": "*",
+    "@validest/core": "0.4.6",
+    "validest": "0.4.6",
+    "@validest/remix-react": "0.4.6",
+    "@validest/remix-node": "0.4.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -24,7 +22,5 @@
     "eslint": "^8.15.0",
     "typescript": "^4.7.4"
   },
-  "engines": {
-    "node": ">=14"
-  }
+  "engines": { "node": ">=14" }
 }

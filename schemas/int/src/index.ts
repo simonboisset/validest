@@ -1,5 +1,5 @@
-import { Schema } from '@ts-v/core';
-import parseNumber from '@ts-v/parse-number';
+import { Schema } from '@validest/core';
+import parseNumber from '@validest/parse-number';
 
 const int =
   (error?: string): Schema<number> =>

@@ -1,4 +1,4 @@
-import type { Schema, TsvError } from '@ts-v/core';
+import type { Schema, TsvError } from '@validest/core';
 
 type ObjectParam<T> = { [K in keyof T]: Schema<T[K]> };
 

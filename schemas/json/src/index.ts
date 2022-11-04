@@ -1,4 +1,4 @@
-import { Schema } from '@ts-v/core';
+import { Schema } from '@validest/core';
 
 const json =
   (error?: string): Schema<any> =>

@@ -1,4 +1,4 @@
-import { number, object, string } from '@ts-v/kit';
+import { number, object, string } from 'validest';
 import { expect, test } from 'vitest';
 
 test('email returns data object', () => {

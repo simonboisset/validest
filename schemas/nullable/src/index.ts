@@ -1,4 +1,4 @@
-import type { Schema } from '@ts-v/core';
+import type { Schema } from '@validest/core';
 
 const nullable =
   <T>(schema: Schema<T>): Schema<T | null> =>

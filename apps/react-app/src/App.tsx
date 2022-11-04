@@ -1,7 +1,7 @@
-import s from '@ts-v/kit';
-import object from '@ts-v/object';
-import { useTsvForm } from '@ts-v/react';
+import object from '@validest/object';
+import { useTsvForm } from '@validest/react';
 import { useState } from 'react';
+import s from 'validest';
 import './App.css';
 import logo from './logo.svg';
 

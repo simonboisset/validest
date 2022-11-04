@@ -1,4 +1,4 @@
-import { int, object, string } from '@ts-v/kit';
+import { int, object, string } from 'validest';
 import { expect, test } from 'vitest';
 import or from '.';
 

@@ -1,6 +1,6 @@
 {
-  "name": "@ts-v/react",
-  "version": "0.4.5",
+  "name": "@validest/react",
+  "version": "0.4.6",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -12,23 +12,21 @@
     "version:major": "yarn version --new-version major --no-git-tag-version",
     "version:minor": "yarn version --new-version minor --no-git-tag-version",
     "version:patch": "yarn version --new-version patch --no-git-tag-version",
-    "publish:major": "yarn publish --access public",
-    "publish:minor": "yarn publish --access public",
-    "publish:patch": "yarn publish --access public"
+    "publish:lib": "yarn publish --access public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/simonboisset/ts-v",
+    "url": "https://github.com/simonboisset/validest",
     "directory": "packages/react"
   },
   "bugs": {
-    "url": "https://github.com/simonboisset/ts-v/issues"
+    "url": "https://github.com/simonboisset/validest/issues"
   },
-  "homepage": "https://github.com/simonboisset/ts-v",
+  "homepage": "https://github.com/simonboisset/validest",
   "author": "Simon Boisset <simonboisset.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@ts-v/core": "*",
+    "@validest/core": "*",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "builder": "*",
@@ -42,7 +40,7 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@ts-v/form": "*"
+    "@validest/form": "0.4.6"
   },
   "keywords": [
     "typescript",

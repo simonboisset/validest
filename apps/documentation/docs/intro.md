@@ -4,24 +4,24 @@ sidebar_position: 1
 
 # Intro
 
-ts-v is a data runtime validation tool, written in typescript and for typescript. It is a lightweight alternative to [yup](https://github.com/jquense/yup), [zod](https://zod.dev/) or [superstruct](https://docs.superstructjs.org/).
+validest is a data runtime validation tool, written in typescript and for typescript. It is a lightweight alternative to [yup](https://github.com/jquense/yup), [zod](https://zod.dev/) or [superstruct](https://docs.superstructjs.org/).
 
-ts-v is written with customization in mind. Of course there is a standard validation scheme, but sometimes you may need specific data validation and you can do that with ts-v.
+validest is written with customization in mind. Of course there is a standard validation scheme, but sometimes you may need specific data validation and you can do that with validest.
 
 ## Installation
 
 ```sh
-yarn add @ts-v/core
+yarn add @validest/core
 ```
 
 :::info
-You can install `@ts-v/kit` instead of `@ts-v/core` to use all schemas.
+You can install `validest` instead of `@validest/core` to use all schemas.
 :::
 
 Install the schema you need :
 
 ```sh
-yarn add @ts-v/object @ts-v/string @ts-v/int
+yarn add @validest/object @validest/string @validest/int
 ```
 
 ## Usage
@@ -29,9 +29,9 @@ yarn add @ts-v/object @ts-v/string @ts-v/int
 ### Write your schema
 
 ```ts
-import string from '@ts-v/string';
-import object from '@ts-v/object';
-import int from '@ts-v/int';
+import string from '@validest/string';
+import object from '@validest/object';
+import int from '@validest/int';
 
 const schema = object({
   name: string('Custom error message'),

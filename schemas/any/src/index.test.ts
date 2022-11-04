@@ -1,4 +1,4 @@
-import { any } from '@ts-v/kit';
+import { any } from 'validest';
 import { expect, test } from 'vitest';
 
 test('any returns value', () => {

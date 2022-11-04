@@ -1,4 +1,4 @@
-import type { Schema } from '@ts-v/core';
+import type { Schema } from '@validest/core';
 
 type SchemaValue<S> = S extends Schema<infer A> ? A : never;
 

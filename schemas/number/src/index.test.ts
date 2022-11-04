@@ -1,4 +1,4 @@
-import { number, optional } from '@ts-v/kit';
+import { number, optional } from 'validest';
 import { expect, test } from 'vitest';
 
 test('number returns error for non-numbers', () => {
