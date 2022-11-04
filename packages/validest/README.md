@@ -1,6 +1,6 @@
 # Typescript validation starter kit
 
-See [ts-v documentation](https://ts-v.dev)
+See [validest documentation](https://validest.dev)
 Validation schema for typescript.
 
 ## Quick start
@@ -8,14 +8,14 @@ Validation schema for typescript.
 Installation :
 
 ```sh
-yarn add @ts-v/core @ts-v/kit
+yarn add @validest/core validest
 ```
 
 Code :
 
 ```ts
-import { array, object, validate } from '@ts-v/core';
-import { number, oneOf, string } from '@ts-v/kit';
+import { array, object, validate } from '@validest/core';
+import { number, oneOf, string } from 'validest';
 
 // Unknown params
 const params = {

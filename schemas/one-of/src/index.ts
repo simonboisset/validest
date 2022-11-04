@@ -1,4 +1,4 @@
-import { Schema } from '@ts-v/core';
+import { Schema } from '@validest/core';
 
 const isOneOf = <T extends string>(options: T[], value: unknown): value is T =>
   typeof value === 'string' && options.includes(value as T);

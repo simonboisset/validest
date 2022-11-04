@@ -1,4 +1,4 @@
-import { optional, string } from '@ts-v/kit';
+import { optional, string } from 'validest';
 import { expect, test } from 'vitest';
 
 test('string returns false for non-strings', () => {

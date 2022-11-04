@@ -1,7 +1,7 @@
 import { useActionData } from '@remix-run/react';
-import type { TsvError, Schema } from '@ts-v/core';
+import type { Schema, TsvError } from '@validest/core';
+import { getFormData } from '@validest/form';
 import { useState } from 'react';
-import { getFormData } from '@ts-v/form';
 
 type ReturnTsvAction<R, T> = {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;

@@ -1,4 +1,4 @@
-import { json } from '@ts-v/kit';
+import { json } from 'validest';
 import { expect, test } from 'vitest';
 
 test('json returns error for non json value', () => {

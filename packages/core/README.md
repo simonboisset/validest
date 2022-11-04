@@ -1,6 +1,6 @@
 # Typescript validation
 
-See [ts-v documentation](https://ts-v.dev)
+See [validest documentation](https://validest.dev)
 Validation schema for typescript.
 
 ## Quick start
@@ -8,13 +8,13 @@ Validation schema for typescript.
 Installation :
 
 ```sh
-yarn add @ts-v/core
+yarn add @validest/core
 ```
 
 Code :
 
 ```ts
-import { validate } from '@ts-v/core';
+import { validate } from '@validest/core';
 
 // Unknown params
 const params = {
@@ -48,8 +48,8 @@ The returned value of validate function will be typed.
 If params don't pass validation it will throw error as a similar object with keys params and string error values.
 
 ```ts
-import { array, object, validate } from '@ts-v/core';
-import { number, oneOf, string } from '@ts-v/kit';
+import { array, object, validate } from '@validest/core';
+import { number, oneOf, string } from 'validest';
 
 // Unknown params
 const params = {
@@ -107,14 +107,14 @@ const { name, age } = validate(
 
 ### Starter kit
 
-To start with the base shemas you can use [@ts-v/kit](../kit/README.md)
+To start with the base shemas you can use [validest](../kit/README.md)
 
 ### Custom schema
 
 You can also right your own schema. The only rule is tu return a Schema type with you desired type in generic type.
 
 ```ts
-import type { Schema } from '@ts-v/core';
+import type { Schema } from '@validest/core';
 ```
 
 Schema type is a function that take an unkown value and return an object `{ data , error }`. If value is good error must undefined, if it's not data must be undefined.

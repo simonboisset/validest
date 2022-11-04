@@ -1,3 +1,3 @@
 # Or
 
-See [ts-v documentation](https://ts-v.dev)
+See [validest documentation](https://validest.dev)

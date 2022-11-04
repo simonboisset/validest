@@ -1,4 +1,4 @@
-import { array, string } from '@ts-v/kit';
+import { array, string } from 'validest';
 import { expect, test } from 'vitest';
 
 test('shoud return array error', () => {

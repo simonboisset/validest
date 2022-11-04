@@ -14,7 +14,7 @@ This package uses the same conventions [here](/docs/frameworks/react#conventions
 ## Installation
 
 ```sh
-yarn add @ts-v/remix
+yarn add @validest/remix
 ```
 
 ## Front validation
@@ -24,7 +24,7 @@ yarn add @ts-v/remix
 It's written on top of `useActionData`.
 
 ```tsx
-import { useTsvAction }from '@ts-v/remix/react';
+import { useTsvAction }from '@validest/remix/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -58,7 +58,7 @@ const Component =()=>{
 It's written on top of `useFetcher`.
 
 ```tsx
-import { useTsvFetcher }from '@ts-v/remix/react';
+import { useTsvFetcher }from '@validest/remix/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -92,7 +92,7 @@ return (
 In ActionFunction you can validate the data of the request with same schema and it will be typed.
 
 ```ts
-import { validateRequest } from '@ts-v/remix/node';
+import { validateRequest } from '@validest/remix/node';
 
 export const action: ActionFunction = ({ request }) => {
   const data = validateRequest(request, schema);

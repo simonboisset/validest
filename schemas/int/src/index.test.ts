@@ -1,4 +1,4 @@
-import { int } from '@ts-v/kit';
+import { int } from 'validest';
 import { expect, test } from 'vitest';
 
 test('number returns error for non integer', () => {

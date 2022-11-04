@@ -1,4 +1,4 @@
-import { array, date, int, isValid, number, object, oneOf, string } from '@ts-v/kit';
+import { array, date, int, isValid, number, object, oneOf, string } from 'validest';
 import { expect, test } from 'vitest';
 
 test('shoud validate form data', () => {

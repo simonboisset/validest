@@ -1,5 +1,5 @@
 import { Form } from '@remix-run/react';
-import { useTsvAction } from '@ts-v/remix';
+import { useTsvAction } from '@validest/remix';
 import { actionValidation } from '~/action.server';
 import { schema } from '~/schema';
 

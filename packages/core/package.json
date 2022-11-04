@@ -1,12 +1,10 @@
 {
-  "name": "@ts-v/core",
+  "name": "@validest/core",
   "version": "0.4.5",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "rm -rf dist && builder && tsc",
     "version:major": "yarn version --new-version major --no-git-tag-version",
@@ -16,15 +14,9 @@
     "publish:minor": "yarn publish --access public",
     "publish:patch": "yarn publish --access public"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/simonboisset/ts-v",
-    "directory": "packages/core"
-  },
-  "bugs": {
-    "url": "https://github.com/simonboisset/ts-v/issues"
-  },
-  "homepage": "https://github.com/simonboisset/ts-v",
+  "repository": { "type": "git", "url": "https://github.com/simonboisset/validest", "directory": "packages/core" },
+  "bugs": { "url": "https://github.com/simonboisset/validest/issues" },
+  "homepage": "https://github.com/simonboisset/validest",
   "author": "Simon Boisset <simonboisset.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -33,9 +25,5 @@
     "esbuild-node-externals": "^1.4.1",
     "typescript": "^4.7.4"
   },
-  "keywords": [
-    "typescript",
-    "validation",
-    "schema"
-  ]
+  "keywords": ["typescript", "validation", "schema"]
 }

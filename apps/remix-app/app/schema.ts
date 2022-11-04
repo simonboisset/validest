@@ -1,4 +1,4 @@
-import { object, number, string } from '@ts-v/kit';
+import { number, object, string } from 'validest';
 
 export const schema = object({
   name: string('Please enter your name'),

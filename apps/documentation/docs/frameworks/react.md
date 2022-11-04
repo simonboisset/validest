@@ -47,13 +47,13 @@ type Data = {
 ## Installation
 
 ```sh
-yarn add @ts-v/core @ts-v/react @ts-v/kit
+yarn add @validest/core @validest/react validest
 ```
 
 ## useTsvForm
 
 ```tsx
-import { useTsvForm } from '@ts-v/react';
+import { useTsvForm } from '@validest/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
