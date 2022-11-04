@@ -2,7 +2,12 @@
   "name": "validest-turbo",
   "version": "0.6.1",
   "private": true,
-  "workspaces": ["apps/*", "packages/*", "schemas/*", "utils/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "schemas/*",
+    "utils/*"
+  ],
   "scripts": {
     "build": "turbo run build",
     "build:lib": "turbo run build --filter=@validest/* --filter=validest --filter=monorepo-version",
@@ -10,7 +15,8 @@
     "publish:lib": "turbo run publish:lib --filter=@validest/* --filter=validest",
     "dev:doc": "turbo run dev --filter=documentation",
     "dev": "turbo run dev --parallel",
-    "test": "yarn build:lib && vitest run",
+    "test": "turbo run test --filter=validest",
+    "test:watch": "turbo run test:watch --filter=validest",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "postinstall": "turbo run build --filter=monorepo-version"
   },
@@ -18,10 +24,16 @@
     "validest": "*",
     "monorepo-version": "*",
     "prettier": "latest",
-    "turbo": "latest",
-    "vitest": "^0.24.0"
+    "turbo": "latest"
   },
-  "engines": { "npm": ">=7.0.0", "node": ">=14.0.0" },
-  "prettier": { "singleQuote": true, "tabWidth": 2, "printWidth": 120 },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  },
   "packageManager": "yarn@1.22.5"
 }
