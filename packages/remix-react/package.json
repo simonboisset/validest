@@ -1,6 +1,6 @@
 {
   "name": "@validest/remix-react",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Typed schema validation for remix stack",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,7 +35,7 @@
     "typescript": "^4.7.4"
   },
   "peerDependencies": { "@remix-run/node": "^1.5.1", "@remix-run/react": "^1.5.1", "react": ">=16" },
-  "dependencies": { "@validest/form": "0.6.0" },
+  "dependencies": { "@validest/form": "0.6.1" },
   "keywords": [
     "typescript",
     "react",

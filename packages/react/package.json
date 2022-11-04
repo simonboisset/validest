@@ -1,6 +1,6 @@
 {
   "name": "@validest/react",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -29,6 +29,6 @@
     "typescript": "^4.7.4"
   },
   "peerDependencies": { "react": ">=16" },
-  "dependencies": { "@validest/form": "0.6.0" },
+  "dependencies": { "@validest/form": "0.6.1" },
   "keywords": ["typescript", "react", "form", "validation", "schema", "form-validation", "react-form-validation"]
 }
