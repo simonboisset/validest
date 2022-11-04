@@ -9,6 +9,14 @@
     },
     "dev": {
       "cache": false
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "test:watch": {
+      "dependsOn": ["^build"],
+      "cache": false
     }
   }
 }
