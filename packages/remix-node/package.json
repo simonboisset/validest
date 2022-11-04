@@ -1,25 +1,27 @@
 {
   "name": "@validest/remix-node",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Typed schema validation for remix stack",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rm -rf dist && builder && tsc",
     "version:major": "yarn version --new-version major --no-git-tag-version",
     "version:minor": "yarn version --new-version minor --no-git-tag-version",
     "version:patch": "yarn version --new-version patch --no-git-tag-version",
-    "publish:major": "yarn publish --access public",
-    "publish:minor": "yarn publish --access public",
-    "publish:patch": "yarn publish --access public"
+    "publish:lib": "yarn publish --access public"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/simonboisset/validest",
     "directory": "packages/remix-node"
   },
-  "bugs": { "url": "https://github.com/simonboisset/validest/issues" },
+  "bugs": {
+    "url": "https://github.com/simonboisset/validest/issues"
+  },
   "homepage": "https://github.com/simonboisset/validest",
   "author": "Simon Boisset <simonboisset.dev@gmail.com>",
   "license": "MIT",
@@ -36,8 +38,14 @@
     "react-dom": "^18.1.0",
     "typescript": "^4.7.4"
   },
-  "dependencies": { "@validest/form": "0.4.5" },
-  "peerDependencies": { "@remix-run/node": "^1.5.1", "@remix-run/react": "^1.5.1", "react": ">=16" },
+  "dependencies": {
+    "@validest/form": "0.4.6"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^1.5.1",
+    "@remix-run/react": "^1.5.1",
+    "react": ">=16"
+  },
   "keywords": [
     "typescript",
     "react",

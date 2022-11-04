@@ -1,6 +1,6 @@
 {
   "name": "validest-turbo",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -11,15 +11,13 @@
   "scripts": {
     "build": "turbo run build",
     "build:lib": "turbo run build --filter=@validest/* --filter=validest --filter=monorepo-version",
-    "monorepo-version": "monorepo-version",
     "build:doc": "turbo run build --filter=documentation",
-    "publish:major": "turbo run publish:major --filter=@validest/* --filter=validest",
-    "publish:minor": "turbo run publish:minor --filter=@validest/* --filter=validest",
-    "publish:patch": "turbo run publish:patch --filter=@validest/* --filter=validest",
+    "publish:lib": "turbo run publish:lib --filter=@validest/* --filter=validest",
     "dev:doc": "turbo run dev --filter=documentation",
     "dev": "turbo run dev --parallel",
     "test": "yarn build:lib && vitest run",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "postinstall": "turbo run build --filter=monorepo-version"
   },
   "devDependencies": {
     "validest": "*",
