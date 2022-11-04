@@ -1,6 +1,6 @@
 {
   "name": "monorepo-version",
-  "version": "0.5.6",
+  "version": "0.6.0",
   "description": "Typed schema validation",
   "bin": "index.js",
   "main": "dist/index.js",
