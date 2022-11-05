@@ -4,6 +4,8 @@
   "version": "0.6.1",
   "bin": "index.js",
   "license": "MIT",
-  "devDependencies": { "esbuild": "^0.14.42", "esbuild-node-externals": "^1.4.1" },
-  "peerDependencies": { "esbuild": "^0.14.42", "esbuild-node-externals": "^1.4.1" }
+  "dependencies": {
+    "esbuild": "^0.14.42",
+    "esbuild-node-externals": "^1.4.1"
+  }
 }
