@@ -1,9 +1,7 @@
-import type { Schema } from '@validest/core';
-
-type SchemaValue<S> = S extends Schema<infer A> ? A : never;
+import type { InferSchema, Schema } from '@validest/core';
 
 const or =
-  <S extends Schema<any>>(schemas: S[]): Schema<SchemaValue<S>> =>
+  <S extends Schema<any>>(schemas: S[]): Schema<InferSchema<S>> =>
   //@ts-ignore
   (value: unknown) => {
     const [schema, ...other] = schemas;

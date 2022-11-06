@@ -1,10 +1,11 @@
-import type { Schema } from '@validest/core';
+import type { InferSchema, Schema } from '@validest/core';
 
-type SchemaValue<S> = S extends Schema<infer A> ? A : never;
-type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (k: infer I) => void ? I : never;
+type UnionToIntersection<U> = (U extends any ? (k: InferSchema<U>) => void : never) extends (k: infer I) => void
+  ? I
+  : never;
 
 const and =
-  <S extends Schema<any>>(schemas: S[]): Schema<UnionToIntersection<SchemaValue<S>>> =>
+  <S extends Schema<any>>(schemas: S[]): Schema<UnionToIntersection<S>> =>
   //@ts-ignore
   (value: unknown) => {
     const [schema, ...other] = schemas;
