@@ -3,7 +3,7 @@ import type { Schema, TsvError } from '@validest/core';
 import { getFormData } from '@validest/form';
 import { useState } from 'react';
 
-export const useTsvFetcher = <R, T>(
+export const useValidestFetcher = <R, T>(
   schema: Schema<T>
 ): {
   error: TsvError<T> | undefined;

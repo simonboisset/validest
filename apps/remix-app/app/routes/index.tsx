@@ -1,12 +1,12 @@
 import { Form } from '@remix-run/react';
-import { useTsvAction } from '@validest/remix';
+import { useValidestAction } from '@validest/remix';
 import { actionValidation } from '~/action.server';
 import { schema } from '~/schema';
 
 export const action = actionValidation;
 
 export default function Index() {
-  const { onSubmit, error, data } = useTsvAction(schema);
+  const { onSubmit, error, data } = useValidestAction(schema);
   console.log(data);
 
   return (

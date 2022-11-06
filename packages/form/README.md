@@ -48,10 +48,10 @@ type Data = {
 yarn add @validest/core @validest/react validest
 ```
 
-### useTsvForm
+### useValidestForm
 
 ```tsx
-import { useTsvForm } from '@validest/react';
+import { useValidestForm } from '@validest/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -60,7 +60,7 @@ const schema = object({
 })
 
 const Component =()=>{
-  const { error, onSubmit } = useTsvForm(schema,(data,e) =>{
+  const { error, onSubmit } = useValidestForm(schema,(data,e) =>{
   // do what you want after validation
 })
 return (
@@ -88,7 +88,7 @@ You can also valide your form on change
 
 ```ts
 const Component =()=>{
-  const { error, onChange } = useTsvForm(schema,(data,e) =>{
+  const { error, onChange } = useValidestForm(schema,(data,e) =>{
   // make that you want after validation
 })
 return (

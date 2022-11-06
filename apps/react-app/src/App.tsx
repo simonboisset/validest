@@ -1,5 +1,5 @@
 import object from '@validest/object';
-import { useTsvForm } from '@validest/react';
+import { useValidestForm } from '@validest/react';
 import { useState } from 'react';
 import s from 'validest';
 import './App.css';
@@ -7,7 +7,7 @@ import logo from './logo.svg';
 
 function App() {
   const [success, setSuccess] = useState(false);
-  const { error, onSubmit } = useTsvForm(
+  const { error, onSubmit } = useValidestForm(
     object({
       name: s.string('Please enter your name'),
       age: s.number('Please enter your age'),

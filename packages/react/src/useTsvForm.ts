@@ -2,7 +2,7 @@ import type { Schema, TsvError } from '@validest/core';
 import { getFormData } from '@validest/form';
 import { useState } from 'react';
 
-export const useTsvForm = <T>(
+export const useValidestForm = <T>(
   schema: Schema<T>,
   afterValidate?: (data: T, e: React.FormEvent<HTMLFormElement>) => void
 ) => {

@@ -18,10 +18,10 @@ yarn add @validest/remix
 
 ## Front validation
 
-### useTsvAction
+### useValidestAction
 
 ```tsx
-import { useTsvAction }from '@validest/remix';
+import { useValidestAction }from '@validest/remix';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -31,7 +31,7 @@ const schema = object({
 
 const Component =()=>{
   // To valide form on each changes you can use onChange methode
-  const { error, onChange } = useTsvAction(schema)
+  const { error, onChange } = useValidestAction(schema)
   return (
     <Form onChange={onChange}>
       <input name='name-lastname'/>
@@ -50,10 +50,10 @@ const Component =()=>{
 }
 ```
 
-### useTsvFetcher
+### useValidestFetcher
 
 ```tsx
-import { useTsvFetcher }from '@validest/remix/react';
+import { useValidestFetcher }from '@validest/remix/react';
 
 const schema = object({
   name:object({ lastname: string('Please enter your lastname'), firstname: string('Please enter your firstname') }),
@@ -62,7 +62,7 @@ const schema = object({
 })
 
 const Component =()=>{
-  const { error, onSubmit,Form } = useTsvFetcher(schema,(data,e) =>{
+  const { error, onSubmit,Form } = useValidestFetcher(schema,(data,e) =>{
   // make that you want after validation
 })
 return (

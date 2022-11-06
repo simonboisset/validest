@@ -10,7 +10,7 @@ type ReturnTsvAction<R, T> = {
   data: R;
 };
 
-export const useTsvAction = <R, T>(schema: Schema<T>): ReturnTsvAction<R, T> => {
+export const useValidestAction = <R, T>(schema: Schema<T>): ReturnTsvAction<R, T> => {
   const actionData = useActionData();
   const [error, setErrors] = useState<TsvError<T>>();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
