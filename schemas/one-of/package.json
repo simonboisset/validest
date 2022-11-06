@@ -1,6 +1,6 @@
 {
   "name": "@validest/one-of",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
