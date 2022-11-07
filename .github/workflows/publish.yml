@@ -36,7 +36,7 @@ jobs:
         run: |
           git config --local user.email "simonboisset.dev@gmail.com"
           git config --local user.name "simonboisset"
-          yarn monorepo-version ${{github.event.inputs.release}}
+          yarn turboversion validest ${{github.event.inputs.release}}
           yarn publish:lib
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
           git commit -a -m "v${PACKAGE_VERSION}"

@@ -14006,6 +14006,11 @@ turbo@latest:
     turbo-windows-64 "1.6.3"
     turbo-windows-arm64 "1.6.3"
 
+turboversion@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/turboversion/-/turboversion-0.1.0.tgz#027aa009c66e81368d40012088f17935117c43f1"
+  integrity sha512-Yi+6gAe+vaoX/LAALYek13azQunwhakFf8MqI4AjvesF2DhGmJgPLtBAQyDrCw324euQGQQoYHW143k8lTI5gg==
+
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.4.0.tgz#07b8203bfa7056c0657050e3ccd2c37730bab8f1"
