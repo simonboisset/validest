@@ -124,3 +124,12 @@ test('shoud get form data with flat array', async () => {
   expect(result?.[1]?.name).toBe('Table 2');
   expect(result?.[1]?.id).toBe('table-2-id');
 });
+
+test('empty list should success', async () => {
+  const map = new Map([]);
+  const request = { formData: () => map } as unknown as Request;
+  const result = await getRequestData(request);
+
+  expect(Array.isArray(result)).toBeTruthy();
+  expect(result).toEqual([]);
+});
