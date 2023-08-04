@@ -1,11 +1,11 @@
 {
   "name": "react-app",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "private": true,
   "dependencies": {
-    "@validest/core": "0.6.8",
-    "validest": "0.6.8",
-    "@validest/react": "0.6.8",
+    "@validest/core": "0.6.9",
+    "validest": "0.6.9",
+    "@validest/react": "0.6.9",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",

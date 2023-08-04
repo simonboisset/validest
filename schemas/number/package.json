@@ -1,6 +1,6 @@
 {
   "name": "@validest/number",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "Typed schema validation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -25,7 +25,7 @@
   "author": "Simon Boisset <simonboisset.dev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@validest/parse-number": "0.6.8"
+    "@validest/parse-number": "0.6.9"
   },
   "devDependencies": {
     "@validest/core": "*",
