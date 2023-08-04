@@ -23,5 +23,9 @@ const getDatFromEntries = <T = any>(entries: Record<string, string | undefined>)
     }
   }
 
-  return mapObjectToArrayIfKeysAreNumbers(result) as T;
+  const data = mapObjectToArrayIfKeysAreNumbers(result);
+  if (Array.isArray(data) && data.length === 0) {
+    return undefined;
+  }
+  return data as T;
 };

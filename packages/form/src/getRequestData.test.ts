@@ -131,5 +131,5 @@ test('empty list should success', async () => {
   const result = await getRequestFormData(request);
 
   expect(Array.isArray(result)).toBeTruthy();
-  expect(result).toEqual([]);
+  expect(result).toEqual(undefined);
 });
