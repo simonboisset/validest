@@ -15,7 +15,7 @@
     "publish:lib": "turbo run publish:lib --filter=@validest/* --filter=validest",
     "dev:doc": "turbo run dev --filter=documentation",
     "dev": "turbo run dev --parallel",
-    "test": "turbo run test --filter=validest",
+    "test": "turbo run test",
     "test:watch": "turbo run test:watch --filter=validest",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

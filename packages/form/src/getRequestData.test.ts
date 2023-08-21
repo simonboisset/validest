@@ -12,6 +12,17 @@ test('shoud get form data', async () => {
   expect(result.name).toBe('simon');
   expect(result.password).toBe('foo');
 });
+test('shoud get form data whit numerical values', async () => {
+  const map = new Map([
+    ['age', '23'],
+    ['id', '1234'],
+  ]);
+  const request = { formData: () => map } as unknown as Request;
+  const result = await getRequestFormData(request);
+
+  expect(result.age).toBe(23);
+  expect(result.id).toBe(1234);
+});
 test('shoud get form data with nested object', async () => {
   const map = new Map([
     ['name', 'joe'],
